@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Amarante&family=Chonburi&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    background-color: black;
+}
+
+img {
+    width:100%; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    /*text-shadow: 0 0 4px black;*/
+    /*background-color: white;*/
+    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    display: flex;
+    /* position: fixed; */
+
+    /* margin: 0; */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    width: 100%; /*prend toute la largeur*/
+    /* justify-content: space-between; */
+    z-index: 1000;
+    box-sizing: border-box;
+    /*background-color: rgba(245, 37, 141, 0.3);*/
+}
+
+body,ul {
+    margin: 0;
+}
+
+input {
+    margin: 0.5em 0 0 0;
+    background-color: rgb(247, 247, 247);
+    border-radius: 7px;
+    padding: 0.5em;
+    font-family: 'Roboto';
+    color: grey; 
+    font-size: 14px;
+    letter-spacing: 0.9px; 
+    margin-bottom: 1px; 
+    text-align: center;
+    width: 364px;
+}
+
+footer {
+    font-family: "Chonburi";
+    margin: 10px 10px;
+    color: #FAE6E1;
+}
+
+/* ID */
+
+#hero {
+    background-image: url("../assets/img/hero_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*Pour les petits écrans */
+@media (max-width: 1024px) {
+    #hero {
+       /* background-size: contain; /* Même comportement pour les petits écrans */
+        background-position: center center; /* L'image commence par le haut */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+
+    .title {
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(50%);
+        transform: translateY(-230%);
+    }
+}
+
+#mot-dynamic {
+    font-size: 80px;
+    color: #ff66cc;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /*effet de transition en douceur*/
+    display: inline-block;
+    /* animation: changeWord 5s ease-in-out infinite;  */
+}
+
+.fade-out {
+    opacity: 0 !important; /*la classe est écrasée par une autre: à vérifier*/
+}
+
+
+/* Animation de transformation du mot */
+@keyframes changeWord {
+    0% {
+        content: "Beauté";
+    }
+    25% {
+        content: "Éclat";
+        
+    }
+    50% {
+        content: "Aura";
+    }
+    75% {
+        content: "Âme";
+    }
+    100% {
+        content: "Style";
+    }
+}
+
+/* CLASS */
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    padding: 20px;
+        
+}
+
+.title {
+    grid-row: 1;
+    grid-column: 1;
+    font-family: 'Chonburi', sans-serif;
+    font-size: 2vw;
+    color: white; 
+    letter-spacing: 0.3vh; 
+    
+    margin-top: 150px;
+}
+
+.avecBlackqueen {
+    display: flex;
+    grid-row: 3;
+    grid-column: 3;
+    align-items: 20px;
+    text-align: right;
+    font-family: 'Chonburi', sans-serif;
+    font-size: 2vw;
+    margin: 10px;
+    color: white; 
+    letter-spacing: 1vb; 
+    top: auto;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+
+.logo {
+    margin: 20px 20px;
+    height: 5vw;
+    width: auto;
+}
+
+.text {
+    color: #FAE6E1;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.menuitem ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    font-family: 'Chonburi'; 
+    font-size: 1vw;
+    text-transform: uppercase;
+    gap: 2vw; /*espace les liens*/
+    color: white;
+    margin: 0 30px;
+    letter-spacing: 0.1vw; 
+}
+
+.menuitem ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Chonburi';
+}
+
+.column {
+    padding: 20px;
+    width: 33.3%;
+    border-width: 0px;
+    @apply border-red-400;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    
+    
+
+}
+
+.imgHover {
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+    
+.imgHover:hover {
+    
+    -webkit-transform: scale(1);
+	transform: scale(1);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- INFOS DE LA PAGE -->
+        <!--CSS-->
+        <link rel="stylesheet" href="dist/style.css">
+        <title>GmBlackqueen</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <script src="assets/scripts.js" defer></script>
+    </head>
+    
+    <!--hello-->
+    <body>
+
+        <section id="hero">
+            
+                
+            <header>
+                <nav id="nav" class="fixed top-0 bg-transparent flex justify-between items-center transition duration-1000 ease-in-out">
+                    <a href="#hero"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+                    <div class="menuitem">
+                        <ul>
+                            <li><a class="text-white hover:text-red-300" href="#services">Services</a></li>
+                            <li><a class="text-white hover:text-red-300" href="#hero">Accueil</a></li>
+                            <li><a class="text-white hover:text-red-300" href="#blackqueen">BlackQueen</a></li>
+                            <li><a class="text-white hover:text-red-300" href="#Contact">Contact</a></li>
+                        </ul>       
+                    </div>
+                </nav>
+                <div class="conteneur">
+                    <div class="title">
+                        <h1>Exprimez<br> votre<br> <span id="mot-dynamic">Beauté</span></h1>
+                        
+                    </div>
+                    <div class="avecBlackqueen">
+                        <h2>Avec <br><span class="BlackQueen">BlackQueen</span></h2>
+                    </div>
+                </div>
+            </header>
+
+        </section>
+        
+        
+        <!--<img src="img/hero_bg.jpg" alt="arriere plan blackqueen">-->
+        <section id="services" class="border border-red-400 p-8 m-8  rounded-3xl">
+            <h2 class="text-4xl text-white font-bold text-center mb-8">Services</h2>
+            <div class="flex gap-20 justify-evenly p-4" >
+                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
+                    <div class="w-full  h-80 overflow-hidden">
+                         <div class="imgHover">   
+                            <img src="assets/img/makeup.jpeg" class ="w-full h-full object-cover object-[5%_25%] rounded-xl" alt="Make-Up Maquillage">
+                         </div>
+                    </div>
+                    <div class="text-lg text-center mt-7  mb-3">
+                        Make-Up
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
+                    <div class="w-full  h-80 overflow-hidden">
+                         <div class="imgHover">   
+                            <img src="assets/img/hair.jpg" class ="w-full h-full object-[5%_20%] object-cover rounded-xl bg-neutral-900" alt="Coiffure Hair">
+                         </div>
+                    </div>
+                    <div class="text-lg text-center mt-7  mb-3">
+                        Coiffure
+                    </div>
+                </div>
+                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
+                    <div class="w-full h-80 overflow-hidden relative">
+                        <div class="imgHover">
+                            <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl " alt="Mariée Mariage">
+                         </div>
+                    </div>
+                    <div class="text-lg text-center mt-7  mb-3">
+                        Mariée
+                    </div>
+                 </div>
+            </div>
+        
+        </section>
+
+        <div id="Contact">
+                    
+            <p>If you are interested in my work, you are welcome to contact me.<br>I will be happy to help your company and be part of your projects.</p>
+            <form enctype="multipart/form-data">
+                <input type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
+                <br>
+                <input type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
+                <br>
+                <input type="text" style="height: 116px; width: 364px; margin-bottom: 5px; background-color: rgb(247, 247, 247); border-radius: 7px; box-shadow: rgb(0,0,0) 0px 0px 0px inset;">
+                <br>
+                <button>Send</button>
+            </form>
+    </div>
+             
+      
+    </body>
+
+    <!--PIED DE PAGE-->
+    <footer>
+        ©2024 GMBLACKQUEEN
+    </footer>
+</html>
