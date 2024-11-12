@@ -140,8 +140,6 @@ footer {
     font-family: 'Chonburi', sans-serif;
     font-size: 2vw;
     color: white; 
-    letter-spacing: 0.3vh; 
-    
     margin-top: 150px;
 }
 
@@ -155,7 +153,6 @@ footer {
     font-size: 2vw;
     margin: 10px;
     color: white; 
-    letter-spacing: 1vb; 
     top: auto;
     bottom: 30px;
     right: 30px;
