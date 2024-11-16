@@ -2,9 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
-    background-color: black;
-}
 
 img {
     width:100%; 
@@ -40,20 +37,6 @@ body,ul {
     margin: 0;
 }
 
-input {
-    margin: 0.5em 0 0 0;
-    background-color: rgb(247, 247, 247);
-    border-radius: 7px;
-    padding: 0.5em;
-    font-family: 'Roboto';
-    color: grey; 
-    font-size: 14px;
-    letter-spacing: 0.9px; 
-    margin-bottom: 1px; 
-    text-align: center;
-    width: 364px;
-}
-
 footer {
     font-family: "Chonburi";
     margin: 10px 10px;
@@ -63,7 +46,7 @@ footer {
 /* ID */
 
 #hero {
-    background-image: url("../assets/img/hero_bg.jpg");
+    background-image: url("../assets/img/bg-zync.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -130,7 +113,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     height: 100%;
-    padding: 20px;
+    padding: 160px;
         
 }
 
@@ -180,14 +163,12 @@ footer {
     font-size: 1vw;
     text-transform: uppercase;
     gap: 2vw; /*espace les liens*/
-    color: white;
     margin: 0 30px;
     letter-spacing: 0.1vw; 
 }
 
 .menuitem ul li a {
     text-decoration: none;
-    color: white;
     font-family: 'Chonburi';
 }
 
@@ -209,6 +190,7 @@ footer {
 	transform: scale(1.2);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+    @apply rounded-md;
 }
     
 .imgHover:hover {

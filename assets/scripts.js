@@ -18,13 +18,22 @@ function changeWord() {
 
 setInterval(changeWord, 8000); //Change le mot toutes les 3 secondes
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
     const nav = document.getElementById('nav');
+    const menuitem = document.querySelectorAll('nav ul li a')
     if(window.scrollY > 20){ //si le scroll dépasse 50 px
         nav.classList.remove('bg-transparent');
-        nav.classList.add('bg-red-300','shadow-lg');
+        for(let i=0;i<menuitem.length;i++){
+            menuitem[i].classList.remove('text-white');
+        }
+        nav.classList.add('shadow-lg','bg-red-400','text-zinc-950');
+        
     }else{
-        nav.classList.remove('bg-red-300','shadow-lg');
+        nav.classList.remove('shadow-lg','bg-red-400','text-zinc-950');
         nav.classList.add('bg-transparent');
+        for(let i=0;i<menuitem.length;i++){
+            menuitem[i].classList.add('text-white');
+        }
+        
     }
 });

@@ -10,13 +10,13 @@
     </head>
     
     <!--hello-->
-    <body>
+    <body class="bg-zinc-950">
 
         <section id="hero">
             
                 
             <header>
-                <nav id="nav" class="fixed top-0 bg-transparent flex justify-between items-center transition duration-1000 ease-in-out">
+                <nav id="nav" class="px-4 fixed top-0 flex justify-center items-center transition duration-1000 ease-in-out">
                     <a href="#hero"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
                     <div class="menuitem">
                         <ul>
@@ -40,73 +40,87 @@
 
         </section>
         
-        
-        <!--<img src="img/hero_bg.jpg" alt="arriere plan blackqueen">-->
-        <section id="services" class="border border-red-400 p-8 m-8  rounded-3xl">
-            <h2 class="text-4xl text-white font-bold text-center mb-8">Services</h2>
-            <div class="flex gap-20 justify-evenly p-4" >
-                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
-                    <div class="w-full  h-80 overflow-hidden">
-                         <div class="imgHover">   
-                            <img src="assets/img/makeup.jpeg" class ="w-full h-full object-cover object-[5%_25%] rounded-xl" alt="Make-Up Maquillage">
-                         </div>
+        <main>
+            <!--<img src="img/hero_bg.jpg" alt="arriere plan blackqueen">-->
+            <section id="services" class="border border-red-400 p-8 m-40  rounded-3xl " >
+                <h2 class="text-4xl text-red-500 font-bold text-center mb-8">Services</h2>
+                <div class="flex gap-20 justify-evenly p-4" >
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class=" bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg text-white border border-red-400">
+                        <div class="w-full  h-80 overflow-hidden">
+                            <div>   
+                                <img src="assets/img/makeup.jpeg" class ="w-full h-full object-cover object-[5%_25%] rounded-xl" alt="Make-Up Maquillage">
+                            </div>
+                        </div>
+                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                            Make-Up
+                        </div>
+                        <div class="text-center text-red-100">
+                            Adoptez un maquillage qui vous ressemble, chaque look est sur-mesure, chaque teint est mis en valeur.
+                        </div>
                     </div>
-                    <div class="text-lg text-center mt-7  mb-3">
-                        Make-Up
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg text-white border border-red-400">
+                        <div class="w-full  h-80 overflow-hidden">
+                            <div class="">   
+                                <img src="assets/img/hair.jpg" class ="w-full h-full object-[5%_20%] object-cover rounded-xl bg-neutral-900" alt="Coiffure Hair">
+                            </div>
+                        </div>
+                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                            Coiffure
+                        </div>
+                        <div class="text-center text-red-100">
+                            Pose de perruque, Tresses, Chignon... Redécouvrez le plaisir d'une coiffure unique qui révèle votre personnalité
+                        </div>
                     </div>
-                    <div class="text-center">
-                        Adoptez un maquillage qui vous ressemble, chaque look est sur-mesure, chaque teint est mis en valeur.
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="bg-cover bg-fixed w-full max-w-sm  p-5 rounded-xl shadow-lg text-white border border-red-400">
+                        <div class="w-full h-80 overflow-hidden relative">
+                            <div class="">
+                                <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl " alt="Mariée Mariage">
+                            </div>
+                        </div>
+                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                            Mariée
+                        </div>
+                        <div class="text-center text-red-100">
+                            Offrez-vous un moment de grâce et d'élégance pour votre grand jour, BlackQueen vous sublime dans un style à la fois naturel et raffiné
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
-                    <div class="w-full  h-80 overflow-hidden">
-                         <div class="imgHover">   
-                            <img src="assets/img/hair.jpg" class ="w-full h-full object-[5%_20%] object-cover rounded-xl bg-neutral-900" alt="Coiffure Hair">
-                         </div>
-                    </div>
-                    <div class="text-lg text-center mt-7  mb-3">
-                        Coiffure
-                    </div>
-                    <div class="text-center">
-                        Pose de perruque, Tresses, Chignon... Redécouvrez le plaisir d'une coiffure unique qui révèle votre personnalité
-                    </div>
-                </div>
-                <div class="w-full max-w-sm bg-neutral-900 p-5 rounded-lg shadow-lg text-white border border-red-400">
-                    <div class="w-full h-80 overflow-hidden relative">
-                        <div class="imgHover">
-                            <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl " alt="Mariée Mariage">
-                         </div>
-                    </div>
-                    <div class="text-lg text-center mt-7  mb-3">
-                        Mariée
-                    </div>
-                    <div class="text-center">
-                        Offrez-vous un moment de grâce et d'élégance pour votre grand jour, BlackQueen vous sublime dans un style à la fois naturel et raffiné
-                    </div>
-                 </div>
-            </div>
-        
-        </section>
+            
+            </section>
 
-        <div id="Contact">
+            <!--SECTION CONTACT-->
+
+            <section id="Contact" class="h-screen">
+                        
+                <div style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex  bg-zinc-900 p-8 m-40 gap-20 h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl ">
+                    <div class="w-full h-full  rounded-xl  relative overflow-hidden  shadow-2xl">
+                        <img class="object-cover object-[5%_15%]  h-full w-full" alt="maquillage mariée" src="assets/img/mariee2.jpg">
+                    </div>
+                    <div  class="w-full flex flex-col border p-10 border-red-400 rounded-xl items-center  shadow-xl ">
+                        <h3 class="text-center font-bold text-3xl text-white m-8">Votre Moment Beauté Commence ici</h3>
+                        <form enctype="multipart/form-data" class="w-full p-5 flex flex-col items-center">
+                            <label for="name" class="hidden">Nom</label>
+                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
+                            <label for="Prénom" class="hidden">Prénom</label>
+                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
+                            <label for="Téléphone" class="hidden">Téléphone</label>   
+                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Télephone" placeholder="Téléphone" >
+                            <label for="Prestation" class="hidden">Prestation</label>
+                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prestation" placeholder="Type de Prestation" >
+                            <button class="w-full m-4 bg-red-500 text-white rounded-md shadow-sm px-8 py-2 font-black">Envoyer</button>
+                        </form>
+                    </div>
                     
-            <p>If you are interested in my work, you are welcome to contact me.<br>I will be happy to help your company and be part of your projects.</p>
-            <form enctype="multipart/form-data">
-                <input type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
-                <br>
-                <input type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
-                <br>
-                <input type="text" style="height: 116px; width: 364px; margin-bottom: 5px; background-color: rgb(247, 247, 247); border-radius: 7px; box-shadow: rgb(0,0,0) 0px 0px 0px inset;">
-                <br>
-                <button>Send</button>
-            </form>
-    </div>
-             
+                </div>  
+            </section>
+        </main>
+        
+     <!--PIED DE PAGE-->
+        <footer>
+            ©2024 GMBLACKQUEEN
+        </footer>         
       
     </body>
 
-    <!--PIED DE PAGE-->
-    <footer>
-        ©2024 GMBLACKQUEEN
-    </footer>
+   
 </html>

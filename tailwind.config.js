@@ -8,5 +8,16 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    'bg-transparent',
+    'opacity-25',
+    'bg-white',
+    'shadow-lg',
+    'text-red-950',
+    'bg-white/20',
+    'bg-red-400',
+    'text-zinc-950',
+    'text-white'
+  ],
 }
 
