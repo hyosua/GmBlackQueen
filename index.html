@@ -51,7 +51,7 @@
                                 <img src="assets/img/makeup.jpeg" class ="w-full h-full object-cover object-[5%_25%] rounded-xl" alt="Make-Up Maquillage">
                             </div>
                         </div>
-                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
                             Make-Up
                         </div>
                         <div class="text-center text-red-100">
@@ -64,7 +64,7 @@
                                 <img src="assets/img/hair.jpg" class ="w-full h-full object-[5%_20%] object-cover rounded-xl bg-neutral-900" alt="Coiffure Hair">
                             </div>
                         </div>
-                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-bold text-center mt-7  mb-3 text-3xl text-red-500">
                             Coiffure
                         </div>
                         <div class="text-center text-red-100">
@@ -77,7 +77,7 @@
                                 <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl " alt="Mariée Mariage">
                             </div>
                         </div>
-                        <div class="font-bold text-lg text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
                             Mariée
                         </div>
                         <div class="text-center text-red-100">
@@ -93,20 +93,31 @@
             <section id="Contact" class="h-screen">
                         
                 <div style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex  bg-zinc-900 p-8 m-40 gap-20 h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl ">
-                    <div class="w-full h-full  rounded-xl  relative overflow-hidden  shadow-2xl">
+                    
+                    <div class="w-full h-full  rounded-xl  relative overflow-hidden  shadow-2xl text-red-400 text-3xl">
                         <img class="object-cover object-[5%_15%]  h-full w-full" alt="maquillage mariée" src="assets/img/mariee2.jpg">
                     </div>
+
                     <div  class="w-full flex flex-col border p-10 border-red-400 rounded-xl items-center  shadow-xl ">
+
                         <h3 class="text-center font-bold text-3xl text-white m-8">Votre Moment Beauté Commence ici</h3>
+
                         <form enctype="multipart/form-data" class="w-full p-5 flex flex-col items-center">
+
                             <label for="name" class="hidden">Nom</label>
-                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
-                            <label for="Prénom" class="hidden">Prénom</label>
-                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
-                            <label for="Téléphone" class="hidden">Téléphone</label>   
-                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Télephone" placeholder="Téléphone" >
-                            <label for="Prestation" class="hidden">Prestation</label>
-                            <input required class="w-full m-4 p-2 text-white border-white rounded-lg ring-2 ring-red-400 bg-zinc-800" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prestation" placeholder="Type de Prestation" >
+                            <div class="flex">
+                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
+                                <label for="Prénom" class="hidden">Prénom</label>
+                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
+                            </div>
+                            <div class="flex">
+                                <label for="Téléphone" class="hidden">Téléphone</label>   
+                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="number" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Télephone" placeholder="Téléphone" >
+                                <label for="Mail" class="hidden">Email</label>   
+                                <input class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="email" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Email" placeholder="E-mail" >
+                            </div>
+                            <label for="description" class="hidden"></label>
+                            <textarea id="description" rows="3" class="outline-none block p-2 m-4 w-full text-sm text-white bg-zinc-800/60 border border-white focus:ring-2 focus:border-red-400 focus:ring-red-400 rounded-lg" placeholder="Description de l'expérience souhaitée..."></textarea>
                             <button class="w-full m-4 bg-red-500 text-white rounded-md shadow-sm px-8 py-2 font-black">Envoyer</button>
                         </form>
                     </div>
