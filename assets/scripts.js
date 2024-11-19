@@ -1,5 +1,8 @@
+//changeWord
 const mots = ["Beauté","Éclat","Aura","Âme","Style"];
-let index = 1;
+let indexMot = 1;
+
+
 
 function changeWord() {
     let elementDynamic = document.getElementById('mot-dynamic');
@@ -8,15 +11,15 @@ function changeWord() {
     elementDynamic.classList.add('fade-out');
     setTimeout(() => {
     //change le texte après le fondu
-    elementDynamic.textContent = mots[index];
-    index = (index + 1) % mots.length;
+    elementDynamic.textContent = mots[indexMot];
+    indexMot = (indexMot + 1) % mots.length;
     //retire la classe pour le faire disparaitre
     elementDynamic.classList.remove('fade-out');
     }, 2000); //correspond au temps du fondu en CSS
 }
 
 
-setInterval(changeWord, 8000); //Change le mot toutes les 3 secondes
+setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
 
 window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
     const nav = document.getElementById('nav');
@@ -36,4 +39,28 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
         }
         
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
+
+    const items = document.querySelectorAll('.carousel-item');
+    let indexInterval = 0;
+    
+
+    function defilementCarousel(){
+        indexInterval = (indexInterval+1) % items.length;
+        
+        items.forEach((element, index) => {
+
+            if(index === indexInterval){
+                element.classList.remove("hidden");
+                element.classList.add("active");        
+            }else{
+                element.classList.remove("active");
+                element.classList.add("hidden");
+            }
+        });
+    }
+
+setInterval(defilementCarousel,4000);
 });

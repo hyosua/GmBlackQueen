@@ -45,10 +45,27 @@
             <section id="services" class="h-screen" >
                 <h2 class="text-4xl text-red-500 font-bold text-center mt-8">Services</h2>
                 <div class="flex gap-20 justify-evenly border border-red-400 p-8 m-40  rounded-3xl " >
+                    
                     <div style="background-image: url(assets/img/grunge-wall.jpg)" class=" bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg text-white border border-red-400">
-                        <div class="w-full  h-80 overflow-hidden">
-                            <div>   
-                                <img src="assets/img/makeup.jpeg" class ="w-full h-full object-cover object-[5%_25%] rounded-xl" alt="Make-Up Maquillage">
+                        <div class="w-full  h-80 overflow-hidden relative">
+ 
+                            <div class="carousel-item active">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up1.jpeg" alt="">
+                            </div>
+                            <div class="carousel-item hidden">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up2.jpeg" alt="">
+                            </div>
+                            <div class="carousel-item hidden">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up-3.jpeg" alt="">
+                            </div>
+                            <div class="carousel-item hidden">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up4.jpg" alt="">
+                            </div>
+                            <div class="carousel-item hidden">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up5.jpg" alt="">
+                            </div>
+                            <div class="carousel-item hidden">
+                                <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/make-up6.jpg" alt="">
                             </div>
                         </div>
                         <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
@@ -74,7 +91,7 @@
                     <div style="background-image: url(assets/img/grunge-wall.jpg)" class="bg-cover bg-fixed w-full max-w-sm  p-5 rounded-xl shadow-lg text-white border border-red-400">
                         <div class="w-full h-80 overflow-hidden relative">
                             <div class="">
-                                <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl " alt="Mariée Mariage">
+                                <img src="assets/img/mariee.jpg" class ="w-full h-full object-cover object-[5%_20%] transform -scale-65 rounded-xl" alt="Mariée Mariage">
                             </div>
                         </div>
                         <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
@@ -89,23 +106,28 @@
             </section>
 
             <section id="portfolio" class="h-screen">
-                <div class="border border-red-500 rounded-3xl p-4">
-                    <h2 class="text-red-500 text-4xl font-bold  text-center">Éclats de Beauté</h2>
-                </div>
-                <div id="portfolio" class="relative w-full flex flex-wrap p-8 m-40 border border-red-400 rounded-3xl gap-5">
+
+                <!-- <div id="caroussel" class="relative w-60 overflow-hidden h-80 p-8 m-40 border border-red-400 rounded-3xl">
                     
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/1.jpeg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/2.jpeg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/3.jpeg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/4.jpeg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/5.jpeg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/7.jpg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/6.jpg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/8.jpg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/9.jpg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/10.jpg">
-                    <img class="h-80  w-auto object-cover" src="assets/img/portfolio/11.jpg">
-                </div>
+                    
+                    <div class="carousel-item hidden">
+                        <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/6.jpg" alt="">
+                    </div>
+                    <div class="carousel-item hidden">
+                        <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/7.jpg" alt="">
+                    </div>
+                    <div class="carousel-item hidden">
+                        <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/8.jpg" alt="">
+                    </div>
+                    <div class="carousel-item hidden">
+                        <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/9.jpg" alt="">
+                    </div>
+                    <div class="carousel-item hidden">
+                        <img class = "rounded-md h-auto block max-w-full absolute object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="assets/img/portfolio/10.jpg" alt="">
+                    </div>
+                    
+
+                </div> -->
             </section> 
 
             
