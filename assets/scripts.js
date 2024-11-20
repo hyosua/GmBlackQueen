@@ -44,8 +44,9 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
 document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
 
     const items = document.querySelectorAll('.carousel-item');
+    const carousel  = document.querySelector('#carousel1')
     let indexInterval = 0;
-    
+    let nbInterval=0;
 
     function defilementCarousel(){
         indexInterval = (indexInterval+1) % items.length;
@@ -62,5 +63,20 @@ document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une 
         });
     }
 
-setInterval(defilementCarousel,4000);
+    function startSliding(){
+        nbInterval = setInterval(defilementCarousel,4000);
+    }
+
+    function stopSliding() {
+        clearInterval(nbInterval)
+        //libère nbInterval 
+        nbInterval = null;
+    }
+
+    carousel.addEventListener("mouseenter", stopSliding);
+    carousel.addEventListener("mouseleave", startSliding);
+    startSliding();
+
 });
+
+
