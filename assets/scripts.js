@@ -24,7 +24,7 @@ setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
 window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
     const nav = document.getElementById('nav');
     const menuitem = document.querySelectorAll('nav ul li a')
-    if(window.scrollY > 20){ //si le scroll dépasse 50 px
+    if(window.scrollY > 20){ //si le scroll dépasse 50 px on change la classe de la barre de nav
         nav.classList.remove('bg-transparent');
         for(let i=0;i<menuitem.length;i++){
             menuitem[i].classList.remove('text-white');
@@ -41,51 +41,106 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
+//                                  
+/*              CAROUSEL            */
+//
 
-    const carousels  = document.querySelectorAll('.carousel');
-    const etatCarousel = {};
-    let delay = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const carousels = document.querySelectorAll(".carousel");
+    const tableauImages = [];
 
-    function changerImage(images, index){
-        images.forEach((image, indexImage) => {
-            image.classList.toggle("active", index === indexImage);
-            image.classList.toggle("hidden", index !== indexImage)
+    // Récupérer les images de chaque carousel et les stocker dans tableauImages
+    carousels.forEach((carousel) => {
+        const images = Array.from(carousel.querySelectorAll(".carousel-item"));
+        tableauImages.push(images);
+    });
+
+    let indexImageActuelle = 0; // Indice global pour les images
+    let indexCarouselActuel = 0; // Indice du carousel actif
+    
+    function masquerImages(carouselActuel){
+        carouselActuel.forEach(image => {
+            image.classList.remove("active");
+            image.classList.add("hidden");
         });
     }
 
-    function majIndexInterval(carousel, images){
-        const currentIndex = etatCarousel[carousel].indexInterval;
-        const newIndex = (currentIndex+1) % images.length;
-        etatCarousel[carousel].indexInterval = newIndex;
-        return newIndex;
+    function afficherImage(imageActuelle){
+        imageActuelle.classList.remove("hidden");
+        imageActuelle.classList.add("active");
+    }
+    
+    function lancerCarousel(){
+        const carouselActuel = tableauImages[indexCarouselActuel];
+        const imageActuelle = carouselActuel[indexImageActuelle];
+
+        masquerImages(carouselActuel);
+        afficherImage(imageActuelle);
+        // Mettre à jour l'index de l'image et du carousel
+        indexImageActuelle = (indexImageActuelle + 1) % carouselActuel.length;
+        // Passer au carousel suivant après celui-ci
+        indexCarouselActuel = (indexCarouselActuel + 1) % tableauImages.length;
+
     }
 
-    function defilerCarousel(carouselElement){
-        const images = carouselElement.querySelectorAll('.carousel-item');
+    lancerCarousel();
+    // Définir un intervalle pour faire défiler les images
+    setInterval(lancerCarousel, 4000); 
 
-        changerImage(images,majIndexInterval(carouselElement, images));
-    }
-
-    function initCarousel(carousel, delay){ 
-        setTimeout(() => {
-        setInterval(() => defilerCarousel(carousel),4000);
-            etatCarousel[carousel] = { indexInterval: 0 }; 
-        }, delay);       
-    }
-
-    // function stopSliding(carousel) {
-    //     clearInterval(carousel.dataset.nbInterval);
-    //     //libère nbInterval 
-    //     carousel.dataset.nbInterval = null;
-    // }
-
-    carousels.forEach(carousel => {
-        delay = delay + 1500;
-        initCarousel(carousel, delay);
-        // carousel.addEventListener("mouseenter", () => stopSliding(carousel));
-        // carousel.addEventListener("mouseleave", () => initCarousel(carousel, 4000));
-    });
 });
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
+
+//     const carousels  = document.querySelectorAll('.carousel');
+//     const etatCarousel = {};
+//     let delay = 0;
+//     let ordreCarousel = 0;
+
+//     function changerImage(images, index){
+//         images.forEach((image, indexImage) => {
+//             image.classList.toggle("active", index === indexImage);
+//             image.classList.toggle("hidden", index !== indexImage)
+//         });
+//     }
+
+//     function majIndexInterval(carousel, images){
+//         const currentIndex = etatCarousel[carousel].indexInterval;
+//         const newIndex = (currentIndex+1) % images.length;
+//         console.log("Index: "+currentIndex);
+//         etatCarousel[carousel].indexInterval = newIndex;
+//         return newIndex;
+//     }
+
+//     function defilerCarousel(carouselElement){
+//         const images = carouselElement.querySelectorAll('.carousel-item');
+
+//         changerImage(images,majIndexInterval(carouselElement, images));
+//     }
+
+//     function initCarousel(carousel, delay){ 
+//         setTimeout(() => {
+//         setInterval(() => defilerCarousel(carousel),4000);
+//             etatCarousel[carousel] = { indexInterval: 0 }; 
+//         }, delay);       
+//     }
+
+//     // function stopSliding(carousel) {
+//     //     clearInterval(carousel.dataset.nbInterval);
+//     //     //libère nbInterval 
+//     //     carousel.dataset.nbInterval = null;
+//     // }
+
+//     carousels.forEach(carousel => {
+//             delay = delay + 2000;
+//         initCarousel(carousel, delay);
+//         // carousel.addEventListener("mouseenter", () => stopSliding(carousel));
+//         // carousel.addEventListener("mouseleave", () => initCarousel(carousel, 4000));
+//     });
+// });
 
 
