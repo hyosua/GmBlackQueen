@@ -201,15 +201,31 @@ footer {
 
 /*      CAROUSEL        */
 
+.carousel {
+    @apply bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg text-white border border-red-400;
+}
+
 .carousel-item {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    @apply rounded-md;
 }
 
 .carousel-item.active{
     opacity: 1;
+    @apply rounded-md;
 }
 
 .carousel-item.hidden{
     display: none;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.carousel-item.active:hover {
+    -webkit-transform: scale(1.5);
+	transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }

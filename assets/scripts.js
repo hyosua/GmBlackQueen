@@ -43,40 +43,49 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
 
 document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
 
-    const items = document.querySelectorAll('.carousel-item');
-    const carousel  = document.querySelector('#carousel1')
-    let indexInterval = 0;
-    let nbInterval=0;
+    const carousels  = document.querySelectorAll('.carousel');
+    const etatCarousel = {};
+    let delay = 0;
 
-    function defilementCarousel(){
-        indexInterval = (indexInterval+1) % items.length;
-        
-        items.forEach((element, index) => {
-
-            if(index === indexInterval){
-                element.classList.remove("hidden");
-                element.classList.add("active");        
-            }else{
-                element.classList.remove("active");
-                element.classList.add("hidden");
-            }
+    function changerImage(images, index){
+        images.forEach((image, indexImage) => {
+            image.classList.toggle("active", index === indexImage);
+            image.classList.toggle("hidden", index !== indexImage)
         });
     }
 
-    function startSliding(){
-        nbInterval = setInterval(defilementCarousel,4000);
+    function majIndexInterval(carousel, images){
+        const currentIndex = etatCarousel[carousel].indexInterval;
+        const newIndex = (currentIndex+1) % images.length;
+        etatCarousel[carousel].indexInterval = newIndex;
+        return newIndex;
     }
 
-    function stopSliding() {
-        clearInterval(nbInterval)
-        //libère nbInterval 
-        nbInterval = null;
+    function defilerCarousel(carouselElement){
+        const images = carouselElement.querySelectorAll('.carousel-item');
+
+        changerImage(images,majIndexInterval(carouselElement, images));
     }
 
-    carousel.addEventListener("mouseenter", stopSliding);
-    carousel.addEventListener("mouseleave", startSliding);
-    startSliding();
+    function initCarousel(carousel, delay){ 
+        setTimeout(() => {
+        setInterval(() => defilerCarousel(carousel),4000);
+            etatCarousel[carousel] = { indexInterval: 0 }; 
+        }, delay);       
+    }
 
+    // function stopSliding(carousel) {
+    //     clearInterval(carousel.dataset.nbInterval);
+    //     //libère nbInterval 
+    //     carousel.dataset.nbInterval = null;
+    // }
+
+    carousels.forEach(carousel => {
+        delay = delay + 1500;
+        initCarousel(carousel, delay);
+        // carousel.addEventListener("mouseenter", () => stopSliding(carousel));
+        // carousel.addEventListener("mouseleave", () => initCarousel(carousel, 4000));
+    });
 });
 
 
