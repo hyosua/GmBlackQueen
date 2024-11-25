@@ -60,13 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function masquerImages(carouselActuel){
         carouselActuel.forEach(image => {
+            
             image.classList.remove("active");
-            image.classList.add("hidden");
+            image.classList.add("cache");
         });
     }
 
     function afficherImage(imageActuelle){
-        imageActuelle.classList.remove("hidden");
+        imageActuelle.classList.remove("cache");
         imageActuelle.classList.add("active");
     }
     
@@ -91,56 +92,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-// document.addEventListener("DOMContentLoaded", () => { //Execute la fonction une fois que le contenu du DOM est chargé
-
-//     const carousels  = document.querySelectorAll('.carousel');
-//     const etatCarousel = {};
-//     let delay = 0;
-//     let ordreCarousel = 0;
-
-//     function changerImage(images, index){
-//         images.forEach((image, indexImage) => {
-//             image.classList.toggle("active", index === indexImage);
-//             image.classList.toggle("hidden", index !== indexImage)
-//         });
-//     }
-
-//     function majIndexInterval(carousel, images){
-//         const currentIndex = etatCarousel[carousel].indexInterval;
-//         const newIndex = (currentIndex+1) % images.length;
-//         console.log("Index: "+currentIndex);
-//         etatCarousel[carousel].indexInterval = newIndex;
-//         return newIndex;
-//     }
-
-//     function defilerCarousel(carouselElement){
-//         const images = carouselElement.querySelectorAll('.carousel-item');
-
-//         changerImage(images,majIndexInterval(carouselElement, images));
-//     }
-
-//     function initCarousel(carousel, delay){ 
-//         setTimeout(() => {
-//         setInterval(() => defilerCarousel(carousel),4000);
-//             etatCarousel[carousel] = { indexInterval: 0 }; 
-//         }, delay);       
-//     }
-
-//     // function stopSliding(carousel) {
-//     //     clearInterval(carousel.dataset.nbInterval);
-//     //     //libère nbInterval 
-//     //     carousel.dataset.nbInterval = null;
-//     // }
-
-//     carousels.forEach(carousel => {
-//             delay = delay + 2000;
-//         initCarousel(carousel, delay);
-//         // carousel.addEventListener("mouseenter", () => stopSliding(carousel));
-//         // carousel.addEventListener("mouseleave", () => initCarousel(carousel, 4000));
-//     });
-// });
 
 
