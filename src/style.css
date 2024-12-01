@@ -41,7 +41,7 @@ footer {
 
 /* ID */
 
-#hero {
+#accueil {
     background-image: url("../assets/img/bg-zync.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +53,7 @@ footer {
 
 /*Pour les petits écrans */
 @media (max-width: 1024px) {
-    #hero {
+    #accueil {
        /* background-size: contain; /* Même comportement pour les petits écrans */
         background-position: center center; /* L'image commence par le haut */
         height: auto; /* Ajuste automatiquement la hauteur */
@@ -70,7 +70,7 @@ footer {
 
 #mot-dynamic {
     font-size: 80px;
-    color: #ff66cc;
+    color: #f87171;
     opacity: 1;
     transition: opacity 1s ease-in-out; /*effet de transition en douceur*/
     display: inline-block;
@@ -140,7 +140,7 @@ footer {
 
 
 .logo {
-    margin: 20px 20px;
+    margin: 20px;
     height: 5vw;
     width: auto;
 }
@@ -229,3 +229,84 @@ footer {
     -webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
+
+/* CIRCLES */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small {
+    width: 600px;
+    height: 600px;
+    left: calc(20% - 300px); /* Centré horizontalement */
+    bottom: calc(50% - 300px); /* Centré verticalement */
+}
+
+.medium {
+    width: 400px;
+    height: 400px;
+    background: #f87171;
+    left: calc(20% - 200px);
+    bottom: calc(50% - 200px);
+}
+
+.large {
+    width: 600px;
+    height: 600px;
+    left: calc(50% - 300px);
+    bottom: calc(50% - 300px);
+    
+}
+
+.xlarge {
+    width: 800px;
+    height: 800px;
+    left: calc(50% - 400px);
+    bottom: calc(50% - 400px);
+    background: #f87171;
+}
+
+.blackqueen {
+    left: calc(50% - 400px);
+    bottom: calc(50% - 400px);
+}
+
+
+  .shade1{
+    opacity: 0.03;
+    background: white;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(1.0);
+    }
+    
+    50%{
+      transform: scale(0.9);
+    }
+    
+    100%{
+      transform: scale(1.0);
+    }
+  }

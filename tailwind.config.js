@@ -5,7 +5,21 @@ module.exports = {
     "./src/**/*.{html,js,css}",  // Inclut les fichiers .html et .js dans le dossier src
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        ripple: 'ripple 15s infinite',
+      },
+      keyframes: {
+        ripple: {
+          '0%' : { transform: 'scale(0.8)', opacity: '1'},
+          '50%' : { transform: 'scale(1)', opacity: '1'},
+          '100%' : { transform: 'scale(0.8)', opacity: '0'},
+        },
+      },
+      spacing: {
+        '128':'32rem',
+      }
+    },
   },
   plugins: [],
   safelist: [
