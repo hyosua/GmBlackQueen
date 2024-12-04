@@ -1,41 +1,38 @@
-//changeWord
-const mots = ["Beauté","Éclat","Aura","Âme","Style"];
-let indexMot = 1;
+//                                  
+/*              MENU            */
+//
+
+const menuBurger = document.getElementById('menu-burger');
+const menu = document.getElementById('menu');
+
+menuBurger.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
+
+//Animation du Bouton Scroll
+document.getElementById('bouton-scroll').addEventListener('click', function() {
+    document.getElementById('services').scrollIntoView({behavior: 'smooth'});
+});
 
 
 
-function changeWord() {
-    let elementDynamic = document.getElementById('mot-dynamic');
-
-    //ajoute la classe fade-out pour faire disparaitre le mot
-    elementDynamic.classList.add('fade-out');
-    setTimeout(() => {
-    //change le texte après le fondu
-    elementDynamic.textContent = mots[indexMot];
-    indexMot = (indexMot + 1) % mots.length;
-    //retire la classe pour le faire disparaitre
-    elementDynamic.classList.remove('fade-out');
-    }, 2000); //correspond au temps du fondu en CSS
-}
-
-
-setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
+// setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
 
 window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
-    const nav = document.getElementById('nav');
-    const menuitem = document.querySelectorAll('nav ul li a')
+    const menuitem = menu.querySelectorAll('ul li a')
     if(window.scrollY > 20){ //si le scroll dépasse 50 px on change la classe de la barre de nav
-        nav.classList.remove('bg-transparent');
+        menu.classList.remove('bg-transparent');
         for(let i=0;i<menuitem.length;i++){
-            menuitem[i].classList.remove('text-white');
+            menuitem[i].classList.remove('text-red-400','hover:text-red-300');
+            menuitem[i].classList.add('hover:text-zinc-900');
         }
-        nav.classList.add('shadow-lg','bg-red-400','text-zinc-950');
+        menu.classList.add('shadow-lg','bg-red-400','text-yellow-200');
         
     }else{
-        nav.classList.remove('shadow-lg','bg-red-400','text-zinc-950');
-        nav.classList.add('bg-transparent');
+        menu.classList.remove('shadow-lg','bg-red-400','text-yellow-200');
+        menu.classList.add('bg-transparent');
         for(let i=0;i<menuitem.length;i++){
-            menuitem[i].classList.add('text-white');
+            menuitem[i].classList.add('text-red-400');
         }
         
     }
