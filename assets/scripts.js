@@ -14,6 +14,16 @@ document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
 });
 
+const liensMenu = document.querySelectorAll('scroll-button');
+
+liensMenu.forEach(lien => {
+    const lienTarget = lien.getAttribute('data-target');
+    
+    lien.addEventListener('click', function(){
+        document.getElementById(lienTarget).scrollIntoView({behavior: 'smooth'});
+    });
+});
+
 
 
 // setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
