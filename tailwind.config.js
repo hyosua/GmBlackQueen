@@ -18,11 +18,6 @@ module.exports = {
       },
       spacing: {
         '128':'32rem',
-      },
-      fontFamily: {
-        amarante: ['"Amarante"', 'serif'],
-        chonburi: ['"Chonburi"', 'serif'],
-        cinzel: ['"Cinzel"', 'serif'],
       }
     },
   },
