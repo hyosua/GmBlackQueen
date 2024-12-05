@@ -9,44 +9,23 @@ menuBurger.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
+window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
+    const barreNav = document.getElementById('nav');
+    const liens = document.querySelectorAll('.lienMenu');
+    const ifScrolled = window.scrollY > 50;
+    
+    barreNav.classList.toggle("scrolled", ifScrolled);
+    liens.forEach((lien) => {
+        lien.classList.toggle("scrolled", ifScrolled)
+    });
+    
+});
+
 //Animation du Bouton Scroll
 document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
 });
 
-const liensMenu = document.querySelectorAll('scroll-button');
-
-liensMenu.forEach(lien => {
-    const lienTarget = lien.getAttribute('data-target');
-    
-    lien.addEventListener('click', function(){
-        document.getElementById(lienTarget).scrollIntoView({behavior: 'smooth'});
-    });
-});
-
-
-
-// setInterval(changeWord, 8000); //Change le mot toutes les 8 secondes
-
-window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
-    const menuitem = menu.querySelectorAll('ul li a')
-    if(window.scrollY > 20){ //si le scroll dépasse 50 px on change la classe de la barre de nav
-        menu.classList.remove('bg-transparent');
-        for(let i=0;i<menuitem.length;i++){
-            menuitem[i].classList.remove('text-red-400','hover:text-red-300');
-            menuitem[i].classList.add('hover:text-zinc-900');
-        }
-        menu.classList.add('shadow-lg','bg-red-400','text-yellow-200');
-        
-    }else{
-        menu.classList.remove('shadow-lg','bg-red-400','text-yellow-200');
-        menu.classList.add('bg-transparent');
-        for(let i=0;i<menuitem.length;i++){
-            menuitem[i].classList.add('text-red-400');
-        }
-        
-    }
-});
 
 //                                  
 /*              CAROUSEL            */

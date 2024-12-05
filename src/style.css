@@ -105,6 +105,16 @@ footer {
     letter-spacing: 0.1vw; 
 }
 
+.lienMenu {
+    @apply font-chonburi font-bold tracking-widest text-base lg:text-2xl text-red-400 hover:text-red-300 no-underline uppercase;
+}
+.lienMenu.scrolled {
+    @apply text-white transition duration-1000 ease-in-out;
+}
+
+#nav.scrolled {
+    @apply px-2 lg:px-4  w-full h-32 fixed top-0 flex flex-col z-50 transition duration-1000 ease-in-out bg-red-400 text-white;
+}
 
 
 .column {
@@ -214,7 +224,6 @@ footer {
     left: calc(50% - 400px);
     bottom: calc(50% - 400px);
 }
-
 
   .shade1{
     opacity: 0.03;
