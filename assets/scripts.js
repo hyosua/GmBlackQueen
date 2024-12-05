@@ -4,6 +4,7 @@
 
 const menuBurger = document.getElementById('menu-burger');
 const menu = document.getElementById('menu');
+const liens = document.querySelectorAll('.lienMenu');
 
 menuBurger.addEventListener('click', () => {
     menu.classList.toggle('hidden');
@@ -11,7 +12,7 @@ menuBurger.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
     const barreNav = document.getElementById('nav');
-    const liens = document.querySelectorAll('.lienMenu');
+    
     const ifScrolled = window.scrollY > 50;
     
     barreNav.classList.toggle("scrolled", ifScrolled);
@@ -26,6 +27,14 @@ document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
 });
 
+liens.forEach(link => {
+  const linkTarget = link.getAttribute('href').substring(1);
+  link.addEventListener('click', () => {
+    console.log(document.getElementById(linkTarget))
+    document.getElementById(linkTarget).scrollIntoView({behavior: 'smooth'});
+  });
+
+});
 
 //                                  
 /*              CAROUSEL            */

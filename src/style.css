@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     /*text-shadow: 0 0 4px black;*/
     /*background-color: white;*/
@@ -109,7 +113,7 @@ footer {
     @apply font-chonburi font-bold tracking-widest text-base lg:text-2xl text-red-400 hover:text-red-300 no-underline uppercase;
 }
 .lienMenu.scrolled {
-    @apply text-white transition duration-1000 ease-in-out;
+    @apply text-white transition duration-1000 ease-in-out hover:text-yellow-200;
 }
 
 #nav.scrolled {
