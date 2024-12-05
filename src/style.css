@@ -16,18 +16,6 @@ header {
 
 }
 
-nav {
-    display: flex;
-    /* position: fixed; */
-
-    /* margin: 0; */
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    width: 100%; /*prend toute la largeur*/
-    /* justify-content: space-between; */
-    z-index: 1000;
-    box-sizing: border-box;
-    /*background-color: rgba(245, 37, 141, 0.3);*/
-}
 
 body,ul {
     margin: 0;
@@ -66,52 +54,24 @@ footer {
         transform: translateX(50%);
         transform: translateY(-230%);
     }
-}
 
-#mot-dynamic {
-    font-size: 80px;
-    color: #f87171;
-    opacity: 1;
-    transition: opacity 1s ease-in-out; /*effet de transition en douceur*/
-    display: inline-block;
-    /* animation: changeWord 5s ease-in-out infinite;  */
-}
-
-.fade-out {
-    opacity: 0 !important; /*la classe est écrasée par une autre: à vérifier*/
+    .logo {
+        height: 48px;
+        width: auto;
+    }
 }
 
 
-/* Animation de transformation du mot */
-@keyframes changeWord {
-    0% {
-        content: "Beauté";
-    }
-    25% {
-        content: "Éclat";
-        
-    }
-    50% {
-        content: "Aura";
-    }
-    75% {
-        content: "Âme";
-    }
-    100% {
-        content: "Style";
-    }
+#menu {
+    top: 100%;
+    left: 0;
+    width: 100%;
 }
+
+
 
 /* CLASS */
 
-.conteneur {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    height: 100%;
-    padding: 160px;
-        
-}
 
 .title {
     grid-row: 1;
@@ -122,25 +82,9 @@ footer {
     margin-top: 150px;
 }
 
-.avecBlackqueen {
-    display: flex;
-    grid-row: 3;
-    grid-column: 3;
-    align-items: 20px;
-    text-align: right;
-    font-family: 'Chonburi', sans-serif;
-    font-size: 2vw;
-    margin: 10px;
-    color: white; 
-    top: auto;
-    bottom: 30px;
-    right: 30px;
-}
-
-
 
 .logo {
-    margin: 20px;
+    margin: 30px;
     height: 5vw;
     width: auto;
 }
@@ -155,18 +99,13 @@ footer {
     list-style: none;
     display: flex;
     justify-content: right;
-    font-family: 'Chonburi'; 
-    font-size: 1vw;
     text-transform: uppercase;
     gap: 2vw; /*espace les liens*/
     margin: 0 30px;
     letter-spacing: 0.1vw; 
 }
 
-.menuitem ul li a {
-    text-decoration: none;
-    font-family: 'Chonburi';
-}
+
 
 .column {
     padding: 20px;
@@ -204,7 +143,7 @@ footer {
 }
 
 .carousel {
-    @apply bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg text-white border border-red-400;
+    @apply bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg border-2;
 }
 
 .carousel-item {

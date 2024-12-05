@@ -4,10 +4,14 @@
         <!-- INFOS DE LA PAGE -->
         <!--CSS-->
         <link rel="stylesheet" href="dist/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Chonburi&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GmBlackqueen</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
         <script src="assets/scripts.js" defer></script>
+        
     </head>
     
 
@@ -18,14 +22,6 @@
         <section id="accueil">
                
             <header>
-                <nav id="nav" class="px-4 fixed top-0 flex justify-center items-center transition duration-1000 ease-in-out">
-                    <a href="#accueil"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
-                    <div class="menuitem">
-                        <ul>
-                            <li><a class="text-white hover:text-red-300" href="#accueil">Accueil</a></li>
-                            <li><a class="text-white hover:text-red-300" href="#services">Services</a></li>
-                            <li><a class="text-white hover:text-red-300" href="#blackqueen">BlackQueen</a></li>
-                            <li><a class="text-white hover:text-red-300" href="#Contact">Contact</a></li>
                 <nav id="nav" class="px-2 lg:px-4  w-full h-32 fixed top-0 flex flex-col z-50 transition duration-1000 ease-in-out">
                     
                     <div id="menu-burger" class="m-8 lg:hidden cursor-pointer">
@@ -43,33 +39,28 @@
                         </ul>       
                     </div>
                 </nav>
-                <div class="conteneur">
-                    <div class="title">
-                        <h1>Exprimez<br> votre<br> <span id="mot-dynamic">Beauté</span></h1>
-                        
-                    </div>
-                    <div class="avecBlackqueen">
-                        <h2>Avec <br><span class="BlackQueen">BlackQueen</span></h2>
-                    </div>
-                </div>
+
                 <div class="circle large shade1"></div>
                 <div class="circle xlarge shade1"></div>
+                
             </header>
-
+                <button id="bouton-scroll" class="absolute bottom-4 right-20 hover:animate-none">
+                    <img src="assets/down-button2.svg" alt="bouton scroll" class="w-16 lg:w-20 h-auto hover:scale-105 transition-transform animate-bounce" />
+                </button>
         </section>
 
         <main>
             
             <!--SERVICES-->
 
-            <section id="services" class="lg:h-screen" >
-                <h2 class="text-4xl text-red-500 font-bold text-center mt-8">Services</h2>
-                <div class="flex flex-col lg:flex-row gap-20 justify-evenly border border-red-400 p-8 m-10 lg:m-40  rounded-3xl " >
+            <section id="services" class="lg:h-screen w-full" >
+                <h2 class="text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">SERVICES</h2>
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly  p-4 m-10 lg:m-40  rounded-3xl " >
 
                     <!-- CAROUSEL 1-->
                     
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel">
-                        <div class="w-full  h-80 overflow-hidden relative">
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-blue-400 border-blue-400">
+                        <div class="w-full  h-40 lg:h-80 overflow-hidden relative">
  
                             <div class="carousel-item active ">
                                 <img class = "carousel-image" src="assets/img/resize/make-up1.jpg" alt="">
@@ -87,18 +78,18 @@
                                 <img class = "carousel-image" src="assets/img/resize/make-up5.jpg" alt="">
                             </div>
                         </div>
-                        <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-chonburi font-bold tracking-widest text-center mt-7  mb-3 text-3xl text-blue-400">
                             Make-Up
                         </div>
-                        <div class="text-center text-red-100">
+                        <div class="text-center font-amarante  tracking-wider text-lg text-red-100">
                             Adoptez un maquillage qui vous ressemble, chaque look est sur-mesure, chaque teint est mis en valeur.
                         </div>
                     </div>
 
                     <!-- CAROUSEL 2-->
 
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel">
-                        <div class="w-full h-80 overflow-hidden relative">
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-yellow-200 border-yellow-200">
+                        <div class="w-full h-40 lg:h-80 overflow-hidden relative">
                             <div class="carousel-item active">
                                 <img class = "carousel-image" src="assets/img/resize/hair.jpg" alt="">
                             </div>
@@ -115,18 +106,18 @@
                                 <img class = "carousel-image" src="assets/img/resize/hair5.jpg"alt="">
                             </div>
                         </div>
-                        <div class="font-bold text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-chonburi font-bold tracking-wider text-center mt-7  mb-3 text-3xl text-yellow-200">
                             Coiffure
                         </div>
-                        <div class="text-center text-red-100">
+                        <div class="text-center font-amarante  tracking-widest text-lg text-red-100">
                             Pose de perruque, Tresses, Chignon... Redécouvrez le plaisir d'une coiffure unique qui révèle votre personnalité
                         </div>
                     </div>
 
                     <!-- CAROUSEL 3-->
 
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel">
-                        <div class="w-full h-80 overflow-hidden relative">
+                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-red-400 border-red-400">
+                        <div class="w-full h-40 lg:h-80 overflow-hidden relative">
                             <div class="carousel-item active">
                                 <img class = "carousel-image" src="assets/img/resize/mariee1.jpg" alt="">
                             </div>
@@ -143,10 +134,10 @@
                                 <img class = "carousel-image" src="assets/img/resize/mariee5.jpg" alt="">
                             </div>
                         </div>
-                        <div class="font-bold  text-center mt-7  mb-3 text-3xl text-red-500">
+                        <div class="font-chonburi font-bold tracking-wider  text-center mt-7  mb-3 text-3xl text-red-400">
                             Mariée
                         </div>
-                        <div class="text-center text-red-100">
+                        <div class="text-center font-amarante  tracking-widest text-lg text-red-100">
                             Offrez-vous un moment de grâce et d'élégance pour votre grand jour, BlackQueen vous sublime dans un style à la fois naturel et raffiné
                         </div>
                     </div>
@@ -156,33 +147,69 @@
 
             <!--SECTION BLACKQUEEN-->
 
-            <section id="blackqueen" class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10">
-                <!-- Section gauche avec les cercles et l'image -->
+            <section id="blackqueen">
+                <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10">
+                    <!-- Section gauche avec les cercles et l'image -->
+                    <div class="w-full lg:w-1/2 flex justify-center items-center">
+                        <div class="absolute            z-30 w-72 h-72 lg:w-96 lg:h-96 bg-center bg-cover"
+                                        style="background-image: url('assets/img/blackqueen/blackqueen.png');">
+                                    </div>
+                        <!-- Cercles animés -->
+                        <div class="flex justify-center items-center z-0 w-96 h-96 lg:w-128 lg:h-128 rounded-full bg-red-400 animate-ripple">
+                            <div class="flex justify-center items-center z-10 w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-yellow-200 animate-ripple">
+                                <div class="flex justify-center items-center z-20 w-48 h-48 lg:w-72 lg:h-72 rounded-full bg-blue-400">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section droite avec le texte -->
+                    <div class="flex flex-col justify-center w-full lg:w-1/2 border-2 border-red-400 p-8 lg:m-40  rounded-3xl " >
+                        <h2 class="text-4xl font-chonburi font-bold tracking-widest mb-4 text-yellow-200">Qui Suis-Je ?</h2>
+                        <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
+                            Je suis <span class="text-red-400 tracking-widest"><strong>BlackQueen</strong></span>, et ma passion pour le maquillage a commencé à l'âge de 22 ans, lorsque j'ai eu la chance de travailler pour la marque <span class="text-blue-400 tracking-widest font-bold">Black Up</span> à <span class="text-yellow-200 tracking-widest font-bold">Kinshasa</span>. Ce fut une révélation : maquiller les autres me permet de leur apporter de la <span class="text-red-400 tracking-widest font-bold">joie</span> et de la <span class="text-blue-400 tracking-widest font-bold">confiance en soi</span>, et cela me rend profondément heureuse. C'est en <span class="text-yellow-200 tracking-widest font-bold">partageant ce bonheur</span> que j'ai découvert ma vocation.
+                        </p>
+
+                        <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
+                            Mon style de maquillage ? <span class="text-red-400 tracking-widest font-bold">Chic, glamour et artistique</span>. J'accorde une grande importance à la <span class="text-blue-400 tracking-widest font-bold">qualité des produits</span> que j’utilise, afin de garantir à mes clientes une peau protégée tout en mettant en valeur leur <span class="text-yellow-200 tracking-widest font-bold">beauté naturelle</span>.
+                        </p>
+                 </div>
+                
+                    
+                    
+                    
+                </div>
+
+                <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10">
+                
+
+                    <!-- Section gauche avec le texte -->
+                    <div class="flex flex-col justify-center w-full lg:w-1/2 border-2 border-red-400 p-8 lg:m-40  rounded-3xl " >
+                        <h2 class="text-4xl font-chonburi font-bold tracking-widest mb-4 text-yellow-200">Une Passion</h2>
+                        <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
+                        
+                            Être <span class="text-red-400 tracking-widest font-bold"><strong>maquilleuse</strong></span>, c’est plus qu'un métier pour moi, c’est une <span class="text-blue-400 tracking-widest font-bold">véritable passion</span> qui m'apporte une paix intérieure. Sublimer les personnes et les aider à se sentir <span class="text-yellow-200 tracking-widest font-bold">belles et confiantes</span> me permet d'être pleinement moi-même.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section droite avec les cercles et l'image -->
                 <div class="w-full lg:w-1/2 flex justify-center items-center">
-                    <div class="absolute z-30 w-72 h-72 lg:w-96 lg:h-96 bg-center bg-cover"
-                                     style="background-image: url('assets/img/resize/blackqueen.png');">
+                    <div class="absolute z-30 w-52 h-72 lg:w-20 lg:h-96 bg-center bg-cover"
+                                    style="background-image: url('assets/img/blackqueen/blackqueen2.png');">
                                 </div>
                     <!-- Cercles animés -->
                     <div class="flex justify-center items-center z-0 w-96 h-96 lg:w-128 lg:h-128 rounded-full bg-red-400 animate-ripple">
-                        <div class="flex justify-center items-center z-10 w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-zinc-950 animate-ripple">
-                             <div class="flex justify-center items-center z-20 w-48 h-48 lg:w-72 lg:h-72 rounded-full bg-red-400">
+                        <div class="flex justify-center items-center z-10 w-72 h-72 lg:w-96 lg:h-96 max-h-full max-w-full rounded-full bg-yellow-200 animate-ripple">
+                            <div class="flex justify-center items-center z-20 w-48 h-48 lg:w-72 lg:h-72 rounded-full bg-blue-400">
                                 
                             </div>
                         </div>
                     </div>
                 </div>
-            
-                <!-- Section droite avec le texte -->
-                <div class="flex flex-col justify-center w-full lg:w-1/2 border border-red-400 p-8 lg:m-40  rounded-3xl " >
-                    <h2 class="text-4xl font-bold mb-4 text-red-400">Qui Suis-Je ?</h2>
-                    <p class="text-lg text-white">
-                        Je suis BlackQueen, et ma passion pour le maquillage a commencé à l'âge de 22 ans, lorsque j'ai eu la chance de travailler pour la marque Black Up à Kinshasa. Ce fut une révélation : maquiller les autres me permet de leur apporter de la joie et de la confiance en soi, et cela me rend profondément heureuse. C'est en partageant ce bonheur que j'ai découvert ma vocation.
-                        <br><br>
-                        Être maquilleuse, c’est plus qu'un métier pour moi, c’est une véritable passion qui m'apporte une paix intérieure. Sublimer les personnes et les aider à se sentir belles et confiantes me permet d'être pleinement moi-même.
-                        <br><br> Mon style de maquillage ? Chic, glamour et artistique. J'accorde une grande importance à la qualité des produits que j’utilise, afin de garantir à mes clientes une peau protégée tout en mettant en valeur leur beauté naturelle.
-                    </p>
-                </div>
             </section>
+
             
             
 
