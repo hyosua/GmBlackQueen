@@ -27,7 +27,7 @@ document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
 });
 
-liens.forEach(link => {
+liens.forEach(link => { //pour chaque lien, effect scrollIntoView
   const linkTarget = link.getAttribute('href').substring(1);
   link.addEventListener('click', () => {
     console.log(document.getElementById(linkTarget))
