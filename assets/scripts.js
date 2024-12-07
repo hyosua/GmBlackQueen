@@ -7,9 +7,10 @@ const menu = document.getElementById('menu');
 const liens = document.querySelectorAll('.lienMenu');
 
 menuBurger.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+    menu.classList.toggle('translate-x-full');
 });
 
+/*
 window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
     const barreNav = document.getElementById('nav');
     
@@ -21,7 +22,7 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
     });
     
 });
-
+*/
 //Animation du Bouton Scroll
 document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
