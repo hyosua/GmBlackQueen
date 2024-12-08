@@ -7,7 +7,13 @@ const menu = document.getElementById('menu');
 const liens = document.querySelectorAll('.lienMenu');
 
 menuBurger.addEventListener('click', () => {
-    menu.classList.toggle('translate-x-full');
+    if (menu.classList.contains('menu-hidden')) {
+        menu.classList.remove('menu-hidden');
+        menu.classList.add('menu-visible');
+    } else {
+        menu.classList.remove('menu-visible');
+        menu.classList.add('menu-hidden');
+    }
 });
 
 /*

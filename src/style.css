@@ -100,7 +100,7 @@ footer {
 }
 
 .menu-visible {
-    transform: translateX(0); /* Menu visible */
+    transform: translateX(50%); /* Menu visible */
 }
 
 .menu-transition {
