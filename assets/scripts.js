@@ -32,6 +32,7 @@ window.addEventListener('scroll', () => { //Changement de l'aspect de la barre d
 //Animation du Bouton Scroll
 document.getElementById('bouton-scroll').addEventListener('click', function() {
     document.getElementById('services').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('bouton-scroll').classList.add('hidden');
 });
 
 liens.forEach(link => { //pour chaque lien, effect scrollIntoView
@@ -39,6 +40,10 @@ liens.forEach(link => { //pour chaque lien, effect scrollIntoView
   link.addEventListener('click', () => {
     console.log(document.getElementById(linkTarget))
     document.getElementById(linkTarget).scrollIntoView({behavior: 'smooth'});
+    if (menu.classList.contains('menu-visible')){
+        menu.classList.remove('menu-visible');
+        menu.classList.add('menu-hidden');
+    }
   });
 
 });
