@@ -22,47 +22,67 @@
         <section id="accueil">
                
             <header>
-                <nav id="nav" class="px-2 lg:px-4  w-full h-32 fixed top-0 flex flex-col z-50 transition duration-1000 ease-in-out">
-                    
-                    <div id="menu-burger" class="m-8 lg:hidden cursor-pointer">
-                        <span class="block w-6 h-1 bg-white mb-1"></span>
-                        <span class="block w-6 h-1 bg-white mb-1"></span>
-                        <span class="block w-6 h-1 bg-white"></span>
-                    </div>
-                    <div id="menu" class="menuitem  flex flex-col gap-14 lg:flex-row lg:items-center lg:justify-center transition duration-500 ease-in-out">
-                        <a href="#accueil"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
-                        <ul class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-11">
-                            <li><a class="lienMenu" href="#accueil" data-target="accueil">Accueil</a></li>
-                            <li><a class="lienMenu" href="#services"  data-target="services">Services</a></li>
-                            <li><a class="lienMenu" href="#blackqueen" data-target="blackqueen">BlackQueen</a></li>
-                            <li><a class="lienMenu" href="#contact" data-target="contact">Contact</a></li>
-                        </ul>       
-                    </div>
-                    
-                </nav>
+                
+                <!-- barre de navigation-->
+                <nav id="nav" class="bg-red-400/65 w-full h-24 fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent">
+                    <div class="flex gap-8 justify-center items-center mx-auto px-4 py-2">
+                        <a href="#accueil"><img src="assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto"></a>
 
+                        <!-- liens menu horizontal -->
+                        <ul class="hidden lg:flex  space-x-8">
+                        
+                            <li><a class="lienMenu" href="#accueil">Accueil</a></li>
+                            <li><a class="lienMenu" href="#services" >Services</a></li>
+                            <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                            <li><a class="lienMenu" href="#contact">Contact</a></li>
+                        </ul> 
+
+                        <!-- menu burger-->
+                        <div id="menu-burger" class="m-8 ml-auto lg:hidden cursor-pointer">
+                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                            <span class="block w-6 h-1 bg-white transition-transform"></span>
+                        </div>
+                    </div>
+                    <div id="menu" class="bg-red-400/65 menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 p-4 z-50">
+                        <!--  fixed    -->   
+                        <ul class="p-4 text-white space-y-10">
+                            
+                            <li><a class="lienMenu" href="#accueil">Accueil</a></li>
+                            <li><a class="lienMenu" href="#services" >Services</a></li>
+                            <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                            <li><a class="lienMenu" href="#contact">Contact</a></li>
+                        </ul>       
+                    </div>  
+                </nav>
+                
+                <!-- menu latéral -->
+                
+
+                <!-- cercles animés -->
+                <div class="circle medium shade1"></div>
                 <div class="circle large shade1"></div>
                 <div class="circle xlarge shade1"></div>
                 
             </header>
 
-                <button id="bouton-scroll" class="absolute bottom-4 right-20 hover:animate-none">
+                <button id="bouton-scroll" class="absolute bottom-4 right-10 hover:animate-none">
                     <img src="assets/down-button2.svg" alt="bouton scroll" class="w-16 lg:w-20 h-auto hover:scale-105 transition-transform animate-bounce" />
                 </button>
         </section>
 
         <main>
             
-            <!--SERVICES-->
+            <!-- Section SERVICES-->
 
-            <section id="services" class="lg:h-screen w-full" >
-                <h2 class="text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">SERVICES</h2>
-                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly  p-4 m-10 lg:m-40  rounded-3xl " >
+            <section id="services" class="lg:h-screen w-full lg:mt-32 scroll-mt-36" >
+                <h2 class="text-2xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">Instants de Beauté</h2>
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly  p-4 m-10   rounded-3xl " >
 
                     <!-- CAROUSEL 1-->
                     
                     <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-blue-400 border-blue-400">
-                        <div class="w-full  h-40 lg:h-80 overflow-hidden relative">
+                        <div class="w-full  h-80 lg:h-80 overflow-hidden relative">
  
                             <div class="carousel-item active ">
                                 <img class = "carousel-image" src="assets/img/resize/make-up1.jpg" alt="">
@@ -91,7 +111,7 @@
                     <!-- CAROUSEL 2-->
 
                     <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-yellow-200 border-yellow-200">
-                        <div class="w-full h-40 lg:h-80 overflow-hidden relative">
+                        <div class="w-full h-80 lg:h-80 overflow-hidden relative">
                             <div class="carousel-item active">
                                 <img class = "carousel-image" src="assets/img/resize/hair.jpg" alt="">
                             </div>
@@ -119,7 +139,7 @@
                     <!-- CAROUSEL 3-->
 
                     <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-red-400 border-red-400">
-                        <div class="w-full h-40 lg:h-80 overflow-hidden relative">
+                        <div class="w-full h-80 lg:h-80 overflow-hidden relative">
                             <div class="carousel-item active">
                                 <img class = "carousel-image" src="assets/img/resize/mariee1.jpg" alt="">
                             </div>
@@ -136,7 +156,7 @@
                                 <img class = "carousel-image" src="assets/img/resize/mariee5.jpg" alt="">
                             </div>
                         </div>
-                        <div class="font-chonburi font-bold tracking-wider  text-center mt-7  mb-3 text-3xl text-red-400">
+                        <div class="font-chonburi font-bold tracking-wider  text-center lg:mt-7  mb-3 text-3xl text-red-400">
                             Mariée
                         </div>
                         <div class="text-center font-amarante  tracking-widest text-lg text-red-100">
@@ -147,10 +167,10 @@
             
             </section>
 
-            <!--SECTION BLACKQUEEN-->
+            <!--section BLACKQUEEN-->
 
             <section id="blackqueen">
-                <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10">
+                <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10 scroll-mt-36">
                     <!-- Section gauche avec les cercles et l'image -->
                     <div class="w-full lg:w-1/2 flex justify-center items-center">
                         <div class="absolute            z-30 w-72 h-72 lg:w-96 lg:h-96 bg-center bg-cover"
@@ -176,48 +196,16 @@
                         <!-- <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
                             Mon style de maquillage ? <span class="text-red-400 tracking-widest font-bold">Chic, glamour et artistique</span>. J'accorde une grande importance à la <span class="text-blue-400 tracking-widest font-bold">qualité des produits</span> que j’utilise, afin de garantir à mes clientes une peau protégée tout en mettant en valeur leur <span class="text-yellow-200 tracking-widest font-bold">beauté naturelle</span>.
                         </p> -->
-                 </div>
-                
-                    
-                    
-                    
-                </div>
-
-                <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10">
-                
-
-                    <!-- Section gauche avec le texte -->
-                    <div class="flex flex-col justify-center w-full lg:w-1/2 border-2 border-red-400 p-8 lg:m-40  rounded-3xl " >
-                        <h2 class="text-4xl font-chonburi font-bold tracking-widest mb-4 text-yellow-200">Une Passion</h2>
-                        <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
-                        
-                            Être <span class="text-red-400 tracking-widest font-bold"><strong>maquilleuse</strong></span>, c’est plus qu'un métier pour moi, c’est une <span class="text-blue-400 tracking-widest font-bold">véritable passion</span> qui m'apporte une paix intérieure. Sublimer les personnes et les aider à se sentir <span class="text-yellow-200 tracking-widest font-bold">belles et confiantes</span> me permet d'être pleinement moi-même.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Section droite avec les cercles et l'image -->
-                <div class="w-full lg:w-1/2 flex justify-center items-center">
-                    <div class="absolute z-30 w-52 h-72 lg:w-20 lg:h-96 bg-center bg-cover"
-                                    style="background-image: url('assets/img/blackqueen/blackqueen2.png');">
-                                </div>
-                    <!-- Cercles animés -->
-                    <div class="flex justify-center items-center z-0 w-96 h-96 lg:w-128 lg:h-128 rounded-full bg-red-400 animate-ripple">
-                        <div class="flex justify-center items-center z-10 w-72 h-72 lg:w-96 lg:h-96 max-h-full max-w-full rounded-full bg-yellow-200 animate-ripple">
-                            <div class="flex justify-center items-center z-20 w-48 h-48 lg:w-72 lg:h-72 rounded-full bg-blue-400">
-                                
-                            </div>
-                        </div>
-                    </div>
+                 </div>            
                 </div>
             </section>
 
             
             
 
-            <!--SECTION CONTACT-->
+            <!--section CONTACT-->
 
-            <section id="contact" class="h-screen">
+            <section id="contact" class="h-screen scroll-mt-36">
                         
                 <div style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex  bg-zinc-900 p-8 lg:m-40 gap-20 h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl ">
                     
@@ -225,7 +213,7 @@
                         <img class="object-cover object-[5%_15%]  h-full w-full" alt="maquillage mariée" src="assets/img/mariee2.jpg">
                     </div>
 
-                    <div  class="w-full flex flex-col border p-10 border-red-400 rounded-xl items-center  shadow-xl ">
+                    <div  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center  shadow-xl ">
 
                         <h3 class="text-center font-bold text-3xl text-white m-8">Votre Moment Beauté Commence ici</h3>
 
