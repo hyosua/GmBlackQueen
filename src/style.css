@@ -97,10 +97,12 @@ footer {
 
 .menu-hidden {
     transform: translateX(100%); /* Menu hors de l'écran */
+    opacity: 0;
 }
 
 .menu-visible {
-    transform: translateX(50%); /* Menu visible */
+    transform: translateX(50%); 
+    opacity: 1;
 }
 
 .menu-transition {
