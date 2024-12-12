@@ -46,7 +46,7 @@
                     </div>
 
                     <!-- menu latéral -->
-                    <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16 p-4 z-50">
+                    <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16ù p-4 z-50">
                         <!--  fixed    -->   
                         <ul class="p-4 text-white space-y-10">
                             
@@ -202,13 +202,13 @@
                 </div>
             </section>
 
-            
-            
 
             <!--section CONTACT-->
 
             <section id="contact" class="h-screen scroll-mt-36">
-                        
+
+               
+                  
                 <div style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-12 p-8 lg:m-40 gap-20 h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl ">
                     
                     <div class="w-full h-full  rounded-xl  relative overflow-hidden  shadow-2xl text-red-400 text-3xl">
@@ -219,23 +219,45 @@
 
                         <h3 class="text-center font-bold text-3xl text-white m-8">Votre Moment Beauté Commence ici</h3>
 
-                        <form class="w-full p-5 flex flex-col items-center">
+                         <!--    Formulaire     -->
+                        <form id="formulaire-contact" method="POST" action="http://localhost:3000/envoyer" class="w-full p-5 flex flex-col items-center shadow-md">
+                            <div class="flex flex-wrap">
 
-                            <label for="name" class="hidden">Nom</label>
-                            <div class="flex">
-                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Name" placeholder="Nom">
-                                <label for="Prénom" class="hidden">Prénom</label>
-                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="text" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Prénom" placeholder="Prénom" >
+                                <!--    Nom     -->
+                                <div class="w-full relative mt-8 px-3 md:w-1/2">
+                                    <input id="name" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="name" placeholder=" ">
+                                    <label for="name" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Nom</label>
+                                    
+                                </div>
+
+                                 <!--    Prénom     -->
+                                <div class="w-full relative mt-8 px-3 md:w-1/2">
+                                    <input id="prenom" required class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="prenom" placeholder=" " >
+                                    <label for="prenom" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Prénom</label>
+                                </div>
+                                
+                                 <!--    Téléphone     -->
+                                <div class="w-full relative mt-8 px-3 ">
+                                    <input id="tel" required class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="number" autocomplete="off" autocorrect="off" name="tel" placeholder=" ">
+                                    <label for="tel" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Téléphone</label>
+                                    
+                                </div>
+
+                                 <!--    E-mail     -->
+                                <div class="w-full relative mt-8 px-3">
+                                    <input id="mail" class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="email"  autocomplete="off" autocorrect="off" name="mail" placeholder=" " >
+                                    <label for="mail" required class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">E-mail</label>
+                                </div>
+                                
+                                 <!--    Description     -->
+                                <div class="w-full relative mt-8 px-3">
+                                    <textarea id="description" rows="3" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="description" placeholder=" "></textarea>
+                                    <label for="description" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Décris-moi ce que tu souhaites...</label>
+                                    
+                                </div>
+                            
+                                <button class="mt-8 w-full m-4 bg-red-500 hover:bg-red-400 text-white rounded-md shadow-xl px-8 py-2 font-black" type="submit">Envoyer</button>
                             </div>
-                            <div class="flex">
-                                <label for="Téléphone" class="hidden">Téléphone</label>   
-                                <input required class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="number" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Télephone" placeholder="Téléphone" >
-                                <label for="Mail" class="hidden">Email</label>   
-                                <input class="outline-none w-full m-4 p-2 text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60" type="email" autocapitalize="on" onfocus="this.value=''" autocomplete="off" autocorrect="off" name="Email" placeholder="E-mail" >
-                            </div>
-                            <label for="description" class="hidden"></label>
-                            <textarea id="description" rows="3" class="outline-none block p-2 m-4 w-full text-sm text-white bg-zinc-800/60 border border-white focus:ring-2 focus:border-red-400 focus:ring-red-400 rounded-lg" placeholder="Description de l'expérience souhaitée..."></textarea>
-                            <button class="w-full m-4 bg-red-500 text-white rounded-md shadow-sm px-8 py-2 font-black" type="submit">Envoyer</button>
                         </form>
                     </div>
                     

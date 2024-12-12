@@ -251,7 +251,14 @@ footer {
     }
   }
 
+/* FORMULAIRE */
 
+.float-label {
+    transition-property: top, font-size, line-height;
+    transition-duration: 150ms;
+    pointer-events: none;
+    transition-timing-function: linear;
+  }
 
 /*Pour les petits écrans */
 @media (max-width: 1024px) {
