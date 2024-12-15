@@ -111,6 +111,8 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         const loader = document.getElementById("loader");
         const champsFormulaire = document.getElementById("champs-formulaire");
         const formConteneur = document.getElementById("form-conteneur");
+        const contactSection = document.getElementById("contact-section");
+        const messageDiv = document.getElementById("form-message");
 
         button.disabled = true;
         loader.classList.remove("hidden");
@@ -133,13 +135,15 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
                 formConteneur.removeChild(form);
                 formConteneur.classList.add("p-4"); // Réduit les marges internes
                 formConteneur.classList.remove("lg:p-10");
-                formConteneur.classList.add("h-30", "justify-center");
-                afficherMessage("Message envoyé avec succès !", "success");
+                formConteneur.classList.add("h-56");
+                contactSection.classList.add("items-center");
+                messageDiv.textContent = `Merci pour votre message. Je vous recontacterai prochainement!`;
+                messageDiv.className = "text-green-500 text-center font-bold";
             }else{
-                afficherMessage(`Erreur: ${resultat.error || "impossible d'envoyer le message."}`, "error");
+                messageDiv.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
             }
         }catch(error){
-                afficherMessage(`Erreur réseau: ${error.message}`, "error");
+                messageDiv.textContent = `Erreur réseau: ${error.message}`;
                 button.disabled = false;
                 button.classList.remove("bg-red-400");
                 button.classList.add("bg-red-500");   
@@ -154,9 +158,9 @@ function afficherMessage(message, type){
     messageDiv.textContent = message;
 
     if (type === "success") {
-        messageDiv.className = "inline text-white text-center font-bold";
+        messageDiv.className = "text-white text-center font-bold";
     } else {
-        messageDiv.className = "inline text-white text-center font-bold";
+        messageDiv.className = " text-white text-center font-bold";
     }
 }
 

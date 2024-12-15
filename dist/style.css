@@ -763,6 +763,10 @@ video {
   height: 12rem;
 }
 
+.h-20{
+  height: 5rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -1287,6 +1291,10 @@ video {
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-700{
+  transition-duration: 700ms;
 }
 
 .ease-in-out{
