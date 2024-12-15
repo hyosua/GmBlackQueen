@@ -38,7 +38,6 @@ document.getElementById('bouton-scroll').addEventListener('click', function() {
 liens.forEach(link => { //pour chaque lien, effect scrollIntoView
   const linkTarget = link.getAttribute('href').substring(1);
   link.addEventListener('click', () => {
-    console.log(document.getElementById(linkTarget))
     document.getElementById(linkTarget).scrollIntoView({behavior: 'smooth'});
     if (menu.classList.contains('menu-visible')){
         menu.classList.remove('menu-visible');
@@ -97,7 +96,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//                                  
+/*              FORMULAIRE            */
+//
 
+document.getElementById("formulaire-contact").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        try{
+            const reponse = await fetch("http://localhost:3000/submit", {
+                method : "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+    
+            const resultat = await reponse.json();
+    
+            if(reponse.ok){
+                afficherMessage("Message envoyé avec succès !", "success");
+            }else{
+                afficherMessage(`Erreur: ${resultat.error || "impossible d'envoyer le message."}`, "error");
+            }
+        }catch(error){
+                afficherMessage(`Erreur réseau: ${error.message}`, "error");
+        }
+        
+});
+
+function afficherMessage(message, type){
+    const messageDiv = document.getElementById("form-message");
+    messageDiv.textContent = message;
+
+    if (type === "success") {
+        messageDiv.classList.remove("text-red-500");
+        messageDiv.classList.add("text-green-500");
+    } else {
+        messageDiv.classList.remove("text-green-500");
+        messageDiv.classList.add("text-red-500");
+    }
+}
 
 
 
