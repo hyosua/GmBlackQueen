@@ -109,6 +109,8 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         const button = document.getElementById("submitButton");
         const buttonText = document.getElementById("buttonText");
         const loader = document.getElementById("loader");
+        const champsFormulaire = document.getElementById("champs-formulaire");
+        const formConteneur = document.getElementById("form-conteneur");
 
         button.disabled = true;
         loader.classList.remove("hidden");
@@ -128,6 +130,10 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
             const resultat = await reponse.json();
     
             if(reponse.ok){
+                formConteneur.removeChild(form);
+                formConteneur.classList.add("p-4"); // Réduit les marges internes
+                formConteneur.classList.remove("lg:p-10");
+                formConteneur.classList.add("h-30", "justify-center");
                 afficherMessage("Message envoyé avec succès !", "success");
             }else{
                 afficherMessage(`Erreur: ${resultat.error || "impossible d'envoyer le message."}`, "error");
@@ -148,10 +154,9 @@ function afficherMessage(message, type){
     messageDiv.textContent = message;
 
     if (type === "success") {
-        messageDiv.classList.remove("text-red-500");
-        messageDiv.classList.add("text-green-500");
+        messageDiv.className = "inline text-white text-center font-bold";
     } else {
-        messageDiv.className = "text-white text-center font-bold";
+        messageDiv.className = "inline text-white text-center font-bold";
     }
 }
 
