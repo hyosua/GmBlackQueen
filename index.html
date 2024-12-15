@@ -221,7 +221,7 @@
 
                          <!--    Formulaire     -->
                         <form id="formulaire-contact" method="POST" action="http://localhost:3000/submit" class="w-full p-5 flex flex-col items-center shadow-md">
-                            <div class="flex flex-wrap">
+                            <div id ="champs-formulaire" class="flex flex-wrap">
 
                                 <!--    Nom     -->
                                 <div class="w-full relative mt-8 px-3 md:w-1/2">
@@ -256,14 +256,25 @@
                                     
                                 </div>
                             
-                                <button class="mt-8 w-full m-4 bg-red-500 hover:bg-red-400 text-white rounded-md shadow-xl px-8 py-2 font-black" type="submit">Envoyer</button>
+                                <button
+                                    id="submitButton"
+                                    class="mt-8 w-full m-4 bg-red-500 hover:bg-red-400 text-white rounded-md shadow-xl px-8 py-2 font-black flex items-center justify-center"
+                                    type="submit"
+                                    >
+                                    <span id="buttonText">Envoyer</span>
+                                    <div
+                                        id="loader"
+                                        class="hidden ml-2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
+                                    ></div>
+                                </button>
+                            </div>
+                            <div id="form-message" class="text-center mt-2">
+
                             </div>
                         </form>
                         
                         <!-- Réponse du serveur -->
-                         <div id="form-message" class="text-center mt-4">
-
-                         </div>
+                         
                     </div>
                     
                 </div>  

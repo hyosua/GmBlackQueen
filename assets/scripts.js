@@ -106,6 +106,15 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         const form = event.target;
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
+        const button = document.getElementById("submitButton");
+        const buttonText = document.getElementById("buttonText");
+        const loader = document.getElementById("loader");
+
+        button.disabled = true;
+        loader.classList.remove("hidden");
+        buttonText.textContent = "Envoi...";
+        button.classList.remove("bg-red-500");
+        button.classList.add("bg-red-400");
         
         try{
             const reponse = await fetch("http://localhost:3000/submit", {
@@ -125,6 +134,11 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
             }
         }catch(error){
                 afficherMessage(`Erreur réseau: ${error.message}`, "error");
+                button.disabled = false;
+                button.classList.remove("bg-red-400");
+                button.classList.add("bg-red-500");   
+                loader.classList.add("hidden");
+                buttonText.textContent = "Envoyer";
         }
         
 });
@@ -137,8 +151,7 @@ function afficherMessage(message, type){
         messageDiv.classList.remove("text-red-500");
         messageDiv.classList.add("text-green-500");
     } else {
-        messageDiv.classList.remove("text-green-500");
-        messageDiv.classList.add("text-red-500");
+        messageDiv.className = "text-white text-center font-bold";
     }
 }
 
