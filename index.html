@@ -15,7 +15,7 @@
     </head>
     
 
-    <body class="bg-zinc-950">
+    <body class="bg-zinc-950 flex flex-col min-h-screen">
 
         <!--ACCUEIL-->
 
@@ -25,11 +25,11 @@
                 
                 <!-- barre de navigation-->
                 <nav id="nav" class="bg-red-400/85 w-full h-24 fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent ">
-                    <div class="flex gap-8 justify-center items-center h-full mx-auto px-4 py-2">
+                    <div class="flex gap-20 justify-center items-center h-full mx-auto px-4 py-2">
                         <a href="#accueil"><img src="assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto"></a>
 
                         <!-- liens menu horizontal -->
-                        <ul class="hidden lg:flex  space-x-8">
+                        <ul class="hidden lg:flex  space-x-20">
                         
                             <li><a class="lienMenu" href="#accueil">Accueil</a></li>
                             <li><a class="lienMenu" href="#services" >Services</a></li>
@@ -73,7 +73,7 @@
                 </button>
         </section>
 
-        <main>
+        <main class="flex-grow">
             
             <!-- Section SERVICES-->
 
@@ -175,7 +175,7 @@
                 <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10 scroll-mt-36">
                     <!-- Section gauche avec les cercles et l'image -->
                     <div class="w-full lg:w-1/2 flex justify-center items-center">
-                        <div class="absolute            z-30 w-72 h-72 lg:w-128 lg:h-128 bg-center bg-cover"
+                        <div class="absolute z-30 w-72 h-72 lg:w-128 lg:h-128 bg-center bg-cover"
                                         style="background-image: url('assets/img/blackqueen/blackqueen.png');">
                                     </div>
                         <!-- Cercles animés -->
@@ -205,22 +205,22 @@
 
             <!--section CONTACT-->
 
-            <section id="contact" class="h-screen scroll-mt-36">
+            <section id="contact" class="h-auto lg:h-screen scroll-mt-36">
 
                
                   
-                <div id="contact-section" style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-12 p-8 lg:m-40 gap-20 h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out">
+                <div id="contact-section" style="background-image: url(assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-6 p-8 lg:m-40 gap-20 h-auto lg:h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out">
                     
-                    <div class="w-full h-full  rounded-xl  relative overflow-hidden  shadow-2xl text-red-400 text-3xl">
-                        <img class="object-cover object-[5%_15%]  h-full w-full" alt="maquillage mariée" src="assets/img/mariee2.jpg">
+                    <div class="w-full flex justify-center relative">
+                        <img class="rounded-xl object-cover object-[5%_15%] w-72 h-72  lg:h-full lg:w-full" alt="maquillage mariée" src="assets/img/mariee2.jpg">
                     </div>
 
                     <div id="form-conteneur"  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center justify-center shadow-xl transition-all duration-700 ease-in-out">
 
-                        <h3 class="text-center font-bold text-3xl text-white m-8">Votre Moment Beauté Commence ici</h3>
+                        <h3 class="text-center font-bold text-3xl text-white m-2 lg:m-8">Votre Moment Beauté Commence ici</h3>
 
                          <!--    Formulaire     -->
-                        <form id="formulaire-contact" method="POST" action="http://localhost:3000/submit" class="w-full p-5 flex flex-col items-center shadow-md">
+                        <form id="formulaire-contact" method="POST" action="http://localhost:3000/submit" class="w-full lg:p-5 flex flex-col items-center shadow-md">
                             <div id ="champs-formulaire" class="flex flex-wrap">
 
                                 <!--    Nom     -->
@@ -281,7 +281,7 @@
         </main>
         
      <!--PIED DE PAGE-->
-        <footer>
+        <footer class="text-center mt-auto">
             ©2024 GMBLACKQUEEN
         </footer>         
       

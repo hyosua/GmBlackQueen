@@ -138,11 +138,13 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
                 formConteneur.classList.add("h-56");
                 contactSection.classList.add("items-center");
                 messageDiv.textContent = `Merci pour votre message. Je vous recontacterai prochainement!`;
-                messageDiv.className = "text-green-500 text-center font-bold";
+                messageDiv.className = "text-white text-center font-bold";
             }else{
                 messageDiv.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
+                messageDiv.className = "text-white text-center font-bold";
             }
         }catch(error){
+                messageDiv.className = "text-white text-center font-bold";
                 messageDiv.textContent = `Erreur réseau: ${error.message}`;
                 button.disabled = false;
                 button.classList.remove("bg-red-400");
