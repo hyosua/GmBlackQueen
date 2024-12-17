@@ -121,7 +121,7 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         button.classList.add("bg-red-400");
         
         try{
-            const reponse = await fetch("http://localhost:3000/submit", {
+            const reponse = await fetch("https://gmblackqueen-serveur.onrender.com/submit", {
                 method : "POST",
                 headers: {
                     "Content-Type": "application/json",
