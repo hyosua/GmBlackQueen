@@ -139,39 +139,25 @@ footer {
 
 /*      CAROUSEL        */
 
-.carousel-image {
-    @apply rounded-md h-auto block max-w-full absolute object-cover;
-    transform: scale(0.75); /* Réduit la taille par défaut */
-    transition: transform 0.3s ease-in-out; 
+carousel {
+    @apply bg-cover center bg-fixed  max-w-lg p-5 rounded-xl shadow-lg border-2 aspect-ratio-[4/3];
 }
 
-.carousel {
-    @apply bg-cover bg-fixed w-full max-w-sm p-5 rounded-xl shadow-lg border-2;
-}
-
-.carousel-item {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-item.active{
-    opacity: 1;
-}
-
-.carousel-item.cache{
-    opacity: 0;
-
-}
-
-
-
-.carousel:hover {
-    -webkit-transform: scale(1.2);
-	transform: scale(1.2);
-    -webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
+.swiper-container {
+    width: 100%;
+    height: 56vh; /* Ajuste la hauteur du carousel */
+    overflow: hidden;
+  }
+  
+  .swiper-slide img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.75rem;
+  }
+  
+  .swiper-slide:hover img {
+    transform: scale(1.1); /* Zoom sur survol */
+  }
+  
 /* CIRCLES */
 
 .circle {

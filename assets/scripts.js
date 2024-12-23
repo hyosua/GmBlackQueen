@@ -51,50 +51,27 @@ liens.forEach(link => { //pour chaque lien, effect scrollIntoView
 /*              CAROUSEL            */
 //
 
-document.addEventListener("DOMContentLoaded", () => {
-    const carousels = document.querySelectorAll(".carousel");
-    const tableauImages = [];
-
-    // Récupérer les images de chaque carousel et les stocker dans tableauImages
-    carousels.forEach((carousel) => {
-        const images = Array.from(carousel.querySelectorAll(".carousel-item"));
-        tableauImages.push(images);
-    });
-
-    let indexImageActuelle = 0; // Indice global pour les images
-    let indexCarouselActuel = 0; // Indice du carousel actif
-    
-    function masquerImages(carouselActuel){
-        carouselActuel.forEach(image => {
-            
-            image.classList.remove("active");
-            image.classList.add("cache");
-        });
-    }
-
-    function afficherImage(imageActuelle){
-        imageActuelle.classList.remove("cache");
-        imageActuelle.classList.add("active");
-    }
-    
-    function lancerCarousel(){
-        const carouselActuel = tableauImages[indexCarouselActuel];
-        const imageActuelle = carouselActuel[indexImageActuelle];
-
-        masquerImages(carouselActuel);
-        afficherImage(imageActuelle);
-        // Mettre à jour l'index de l'image et du carousel
-        indexImageActuelle = (indexImageActuelle + 1) % carouselActuel.length;
-        // Passer au carousel suivant après celui-ci
-        indexCarouselActuel = (indexCarouselActuel + 1) % tableauImages.length;
-
-    }
-
-    lancerCarousel();
-    // Définir un intervalle pour faire défiler les images
-    setInterval(lancerCarousel, 4000); 
-
-});
+const swiper = new Swiper('.swiper-container', {
+    direction: 'vertical', // Définit le défilement vertical
+    loop: true, // Rend le carousel infini
+    autoplay: {
+      delay: 5000, // Change d'image toutes les 3 secondes
+      disableOnInteraction: false, // Continue après une interaction
+    },
+    breakpoints: {
+      640: {
+        allowTouchMove: true, // Activation du toucher pour petits écrans
+      },
+      1024: {
+        allowTouchMove: false, // Désactivation du toucher pour grands écrans
+      },
+    },
+    on: {
+      init: function () {
+        console.log('Swiper initialized');
+      },
+    },
+  });
 
 //                                  
 /*              FORMULAIRE            */

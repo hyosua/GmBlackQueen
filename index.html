@@ -11,6 +11,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GmBlackqueen</title>
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <!-- Swiper CSS -->
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
         <script src="assets/scripts.js" defer></script>
         
     </head>
@@ -78,98 +87,72 @@
             
             <!-- Section SERVICES-->
 
-            <section id="services" class="lg:h-screen w-full lg:mt-32 scroll-mt-36" >
-                <h2 class="text-2xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">Instants de Beauté</h2>
-                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly  p-4 m-10   rounded-3xl " >
-
-                    <!-- CAROUSEL 1-->
-                    
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-blue-400 border-blue-400">
-                        <div class="w-full  h-56 lg:h-80 overflow-hidden relative">
- 
-                            <div class="carousel-item active ">
-                                <img class = "carousel-image" src="assets/img/resize/make-up1.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/make-up2.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/make-up3.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/make-up4.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/make-up5.jpg" alt="">
-                            </div>
+            <section id="services" class="lg:h-screen w-full lg:mt-32 scroll-mt-36">
+                <h2 class="text-2xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">
+                  Instants de Beauté
+                </h2>
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly p-4 m-2 rounded-3xl">
+                  <!-- Conteneur principal du carousel -->
+                  <div
+                    style="background-image: url('assets/img/grunge-wall.jpg')"
+                    class="carousel text-blue-400 border-blue-400 p-6 rounded-lg shadow-lg relative"
+                  >
+                    <!-- Swiper Container -->
+                    <div class="swiper-container w-full h-72 lg:h-80">
+                      <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/img/resize/make-up1.jpg"
+                            alt="Make-up 1"
+                            class="w-full h-full object-cover"
+                          />
                         </div>
-                        <div class="font-chonburi font-bold tracking-widest text-center mt-5  mb-3 text-3xl text-blue-400">
-                            Make-Up
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/img/resize/make-up2.jpg"
+                            alt="Make-up 2"
+                            class="w-full h-full object-cover"
+                          />
                         </div>
-                        <div class="text-center font-amarante  tracking-wider text-lg text-red-100">
-                            Adoptez un maquillage qui vous ressemble, chaque look est sur-mesure, chaque teint est mis en valeur.
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/img/resize/make-up3.jpg"
+                            alt="Make-up 3"
+                            class="w-full h-full object-cover"
+                          />
                         </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/img/resize/make-up4.jpg"
+                            alt="Make-up 4"
+                            class="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/img/resize/make-up5.jpg"
+                            alt="Make-up 5"
+                            class="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                      <!-- Pagination -->
+                      <div class="swiper-pagination"></div>
                     </div>
-
-                    <!-- CAROUSEL 2-->
-
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-yellow-200 border-yellow-200">
-                        <div class="w-full h-56 lg:h-80 overflow-hidden relative">
-                            <div class="carousel-item active">
-                                <img class = "carousel-image" src="assets/img/resize/hair.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/hair2.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/hair3.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/hair4.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/hair5.jpg"alt="">
-                            </div>
-                        </div>
-                        <div class="font-chonburi font-bold tracking-wider text-center mt-5  mb-3 text-3xl text-yellow-200">
-                            Coiffure
-                        </div>
-                        <div class="text-center font-amarante  tracking-widest text-lg text-red-100">
-                            Pose de perruque, Tresses, Chignon... Redécouvrez le plaisir d'une coiffure unique qui révèle votre personnalité
-                        </div>
+                    <!-- Description -->
+                    <div class="font-chonburi font-bold tracking-widest text-center mt-5 mb-3 text-3xl text-blue-400">
+                      Make-Up
                     </div>
-
-                    <!-- CAROUSEL 3-->
-
-                    <div style="background-image: url(assets/img/grunge-wall.jpg)" class="carousel text-red-400 border-red-400">
-                        <div class="w-full h-56 lg:h-80 overflow-hidden relative">
-                            <div class="carousel-item active">
-                                <img class = "carousel-image" src="assets/img/resize/mariee1.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/mariee2.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/mariee3.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/mariee4.jpg" alt="">
-                            </div>
-                            <div class="carousel-item cache">
-                                <img class = "carousel-image" src="assets/img/resize/mariee5.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="font-chonburi font-bold tracking-wider  text-center mt-5  mb-3 text-3xl text-red-400">
-                            Mariée
-                        </div>
-                        <div class="text-center font-amarante  tracking-widest text-lg text-red-100">
-                            Offrez-vous un moment de grâce et d'élégance pour votre grand jour, BlackQueen vous sublime dans un style à la fois naturel et raffiné
-                        </div>
+                    <div class="text-center font-amarante tracking-wider text-lg text-red-100">
+                      Adoptez un maquillage qui vous ressemble, chaque look est sur-mesure,
+                      chaque teint est mis en valeur.
                     </div>
+                  </div>
                 </div>
-            
-            </section>
-
+              </section>
+              
+              
             <!--section BLACKQUEEN-->
 
             <section id="blackqueen">
@@ -287,6 +270,30 @@
         </footer>         
       
     </body>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+          direction: 'vertical', // Définit le défilement vertical
+          loop: true, // Rend le carousel infini
+          autoplay: {
+            delay: 3000, // Change d'image toutes les 3 secondes
+            disableOnInteraction: false, // Continue après une interaction
+          },
+          breakpoints: {
+            640: {
+              allowTouchMove: true, // Activation du toucher pour petits écrans
+            },
+            1024: {
+              allowTouchMove: false, // Désactivation du toucher pour grands écrans
+            },
+          },
+          on: {
+            init: function () {
+              console.log('Swiper initialized');
+            },
+          },
+        });
+      </script>
+      
 
    
 </html>
