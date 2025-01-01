@@ -91,14 +91,14 @@
                 <h2 class="text-2xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8">
                   Instants de Beauté
                 </h2>
+                <!-- Conteneur principal des carousels -->
                 <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly p-4 m-2 rounded-3xl">
-                  <!-- Conteneur principal des carousels -->
+                   <!-- CAROUSEL MAKEUP -->
                   <div
                     style="background-image: url('assets/img/grunge-wall.jpg')"
-                    class="carousel text-blue-400  border-2 border-blue-400 p-6 rounded-lg shadow-lg relative"
+                    class="carousel border-blue-400 "
                   >
-                    <!-- CAROUSEL MAKEUP -->
-                    <div class="swiper-container swiper1 w-full h-72 lg:h-80" data-delay="4000">
+                    <div class="swiper-container swiper1 w-full h-72 lg:h-96" data-delay="4000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
@@ -146,12 +146,13 @@
                       Looks Nude, Soft-Glam et Soirée. Chaque séance est un moment d'échange, où ma touche joviale illumine votre visage.
                     </div>
                   </div>
+
+                   <!-- CAROUSEL MARIEE -->
                   <div
                   style="background-image: url('assets/img/grunge-wall.jpg')"
-                  class="carousel border-2 border-yellow-200 p-6 rounded-lg shadow-lg relative"
-                >
-                <!-- CAROUSEL MARIEE -->
-                <div class="swiper-container w-full h-72 lg:h-80" data-delay="5000">
+                  class="carousel   border-yellow-200 "
+                > 
+                <div class="swiper-container w-full h-72 lg:h-96" data-delay="5000">
                   <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
@@ -196,16 +197,16 @@
                 Mariée
                 </div>
                 <div class=" text-center font-amarante tracking-wider text-lg text-white">
-                  Offrez-vous une mise en beauté sur mesure pour le grand jour : maquillage, coiffure, essais préalables et retouches, adaptés à votre style unique. Je vous accompagne avec soin, ainsi que vos proches, pour une allure élégante et inoubliable.
+                  Maquillage, Coiffure, Essais préalables et Retouches. Je vous accompagne avec soin, ainsi que vos proches, pour une allure élégante et inoubliable.
                 </div>
               </div>
-              
+
+              <!-- CAROUSEL COIFFURE -->
                   <div
                     style="background-image: url('assets/img/grunge-wall.jpg')"
-                    class="carousel border-2 border-red-400 p-6 rounded-lg shadow-lg relative"
+                    class="carousel border-red-400"
                   >
-                    <!-- CAROUSEL COIFFURE -->
-                    <div class="swiper-container swiper3 w-full h-72 lg:h-80" data-delay="6000">
+                    <div class="swiper-container swiper3 w-full h-72 lg:h-96" data-delay="6000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
@@ -382,6 +383,10 @@
         new Swiper(carousel, {
           direction: 'vertical', // Définit le défilement vertical
           loop: true, // Rend le carousel infini
+          mousewheel: {
+            invert: false,  // Optionnel : définit si la molette de la souris fait défiler dans le sens opposé
+          },
+          simulateTouch: true,  
           autoplay: {
           delay: parseInt(delay), // Change d'image toutes les 3 secondes
           disableOnInteraction: false, // Continue après une interaction

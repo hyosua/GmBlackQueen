@@ -620,10 +620,6 @@ video {
   z-index: 50;
 }
 
-.m-10{
-  margin: 2.5rem;
-}
-
 .m-12{
   margin: 3rem;
 }
@@ -948,6 +944,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-yellow-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(254 240 138 / var(--tw-border-opacity));
+}
+
 .border-t-transparent{
   border-top-color: transparent;
 }
@@ -1031,10 +1032,6 @@ video {
 
 .p-8{
   padding: 2rem;
-}
-
-.p-6{
-  padding: 1.5rem;
 }
 
 .px-3{
@@ -1204,6 +1201,11 @@ video {
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.invert{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition{
@@ -1419,6 +1421,25 @@ footer {
 
 /*      CAROUSEL        */
 
+.carousel{
+  position: relative;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 1rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 1024px){
+  .carousel{
+    max-width: 24rem;
+  }
+}
+
 .swiper-container {
   width: 100%;
   height: 56vh;
@@ -1428,6 +1449,9 @@ footer {
 
 .swiper-slide img {
   transition: transform 0.3s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.75rem;
 }
 
 .swiper-slide:hover img {
@@ -1705,6 +1729,10 @@ footer {
 
   .lg\:w-full{
     width: 100%;
+  }
+
+  .lg\:max-w-96{
+    max-width: 24rem;
   }
 
   .lg\:flex-row{
