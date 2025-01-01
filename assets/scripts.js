@@ -51,27 +51,6 @@ liens.forEach(link => { //pour chaque lien, effect scrollIntoView
 /*              CAROUSEL            */
 //
 
-const swiper = new Swiper('.swiper-container', {
-    direction: 'vertical', // Définit le défilement vertical
-    loop: true, // Rend le carousel infini
-    autoplay: {
-      delay: 5000, // Change d'image toutes les 3 secondes
-      disableOnInteraction: false, // Continue après une interaction
-    },
-    breakpoints: {
-      640: {
-        allowTouchMove: true, // Activation du toucher pour petits écrans
-      },
-      1024: {
-        allowTouchMove: false, // Désactivation du toucher pour grands écrans
-      },
-    },
-    on: {
-      init: function () {
-        console.log('Swiper initialized');
-      },
-    },
-  });
 
 //                                  
 /*              FORMULAIRE            */

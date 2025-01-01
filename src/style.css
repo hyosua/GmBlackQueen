@@ -139,8 +139,8 @@ footer {
 
 /*      CAROUSEL        */
 
-carousel {
-    @apply bg-cover center bg-fixed  max-w-lg p-5 rounded-xl shadow-lg border-2 aspect-ratio-[4/3];
+.carousel {
+    @apply bg-cover center bg-fixed  max-w-lg p-5 rounded-xl;
 }
 
 .swiper-container {
@@ -150,7 +150,9 @@ carousel {
   }
   
   .swiper-slide img {
+    
     transition: transform 0.3s ease-in-out;
+    object-fit: contain;
     border-radius: 0.75rem;
   }
   
