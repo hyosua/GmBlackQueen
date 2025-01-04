@@ -16,6 +16,7 @@
   "description": "",
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
