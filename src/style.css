@@ -7,8 +7,9 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden
 }
 
 header {
@@ -21,10 +22,6 @@ header {
 }
 
 
-body,ul {
-    margin: 0;
-}
-
 footer {
     font-family: "Chonburi";
     margin: 10px 10px;
@@ -34,7 +31,7 @@ footer {
 /* ID */
 
 #accueil {
-    background-image: url("../assets/img/bg-zync.jpg");
+    background-image: url("../assets/img/hero_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
