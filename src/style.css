@@ -31,7 +31,7 @@ footer {
 /* ID */
 
 #accueil {
-    background-image: url("../assets/img/hero_bg.jpg");
+    background-image: url("../assets/img/hero_bg_lg.webp");
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
@@ -147,7 +147,6 @@ footer {
   }
   
   .swiper-slide img {
-    
     transition: transform 0.3s ease-in-out;
     object-fit: cover;
     border-radius: 0.75rem;
@@ -250,7 +249,8 @@ footer {
 /*Pour les petits écrans */
 @media (max-width: 1024px) {
     #accueil {
-       /* background-size: contain; /* Même comportement pour les petits écrans */
+        background-size: contain; /* Même comportement pour les petits écrans */
+        background-image: url("../assets/img/hero_bg.webp");
         background-position: center center; /* L'image commence par le haut */
         height: auto; /* Ajuste automatiquement la hauteur */
     }
