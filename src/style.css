@@ -31,16 +31,14 @@ footer {
 /* ID */
 
 #accueil {
-    background-image: url("../assets/img/hero_bg_lg.webp");
+    background-image: url("/assets/img/hero_bg_lg.webp");
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
     background-size: cover; 
-    background-attachment: fixed;
     background-position: center center;
     width: 100%;
     height: 100vh;
 }
-
-
 
 
 #menu {
@@ -250,7 +248,7 @@ footer {
 @media (max-width: 1024px) {
     #accueil {
         background-size: contain; /* Même comportement pour les petits écrans */
-        background-image: url("../assets/img/hero_bg.webp");
+        background-image: url("/assets/img/hero_bg.webp");
         background-position: center center; /* L'image commence par le haut */
         height: auto; /* Ajuste automatiquement la hauteur */
     }
