@@ -111,16 +111,6 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         
 });
 
-// function afficherMessage(message, type){
-//     const messageDiv = document.getElementById("form-message");
-//     messageDiv.textContent = message;
-
-//     if (type === "success") {
-//         messageDiv.className = "text-white text-center font-bold";
-//     } else {
-//         messageDiv.className = " text-white text-center font-bold";
-//     }
-// }
 
 
 
