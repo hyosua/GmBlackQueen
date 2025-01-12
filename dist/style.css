@@ -600,6 +600,10 @@ video {
   top: 0px;
 }
 
+.right-4{
+  right: 1rem;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -622,6 +626,10 @@ video {
 
 .z-50{
   z-index: 50;
+}
+
+.m-0{
+  margin: 0px;
 }
 
 .m-12{
@@ -684,6 +692,14 @@ video {
 
 .mt-auto{
   margin-top: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .block{
@@ -791,12 +807,20 @@ video {
   width: 100%;
 }
 
+.w-60{
+  width: 15rem;
+}
+
 .max-w-\[calc\(100\%-18px\)\]{
   max-width: calc(100% - 18px);
 }
 
 .max-w-full{
   max-width: 100%;
+}
+
+.max-w-128{
+  max-width: 32rem;
 }
 
 .flex-grow{
@@ -921,6 +945,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-x-16 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(4rem * var(--tw-space-x-reverse));
+  margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden{
@@ -1062,6 +1092,10 @@ video {
   padding: 1rem;
 }
 
+.p-6{
+  padding: 1.5rem;
+}
+
 .p-8{
   padding: 2rem;
 }
@@ -1145,6 +1179,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -1155,6 +1194,10 @@ video {
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .leading-loose{

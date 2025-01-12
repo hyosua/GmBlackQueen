@@ -42,12 +42,13 @@
                       <a href="#accueil"><img src="../assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto" data-aos="fade-right" data-aos-duration="1000"></a>
 
                       <!-- liens menu horizontal -->
-                      <ul class="hidden lg:flex  space-x-20">
+                      <ul class="hidden lg:flex  space-x-16">
                       
                           <li data-aos="fade-right"><a class="lienMenu" href="#accueil" >Accueil</a></li>
                           <li data-aos="fade-right"><a class="lienMenu" href="#services" >Services</a></li>
                           <li data-aos="fade-down" ><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
                           <li data-aos="fade-left"><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#review">Témoignages</a></li>
                           <li data-aos="fade-left"><a class="lienMenu" href="#contact">Contact</a></li>
                       </ul> 
 
@@ -64,10 +65,11 @@
                       <!--  fixed    -->   
                       <ul class="p-4 text-white space-y-10">
                           
-                          <li ><a class="lienMenu" href="#accueil">Accueil</a></li>
+                          <li><a class="lienMenu" href="#accueil">Accueil</a></li>
                           <li><a class="lienMenu" href="#services" >Services</a></li>
                           <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
                           <li><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li><a class="lienMenu" href="#review">Témoignages</a></li>
                           <li><a class="lienMenu" href="#contact">Contact</a></li>
                       </ul>       
                   </div>  
@@ -104,7 +106,7 @@
                     class="carousel border-blue-400"
                     data-aos="fade-right"
                   >
-                    <div class="swiper-container swiper1 w-full h-72 lg:h-96" data-delay="4000">
+                    <div class="swiper-container  w-full h-72 lg:h-96" data-delay="4000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
@@ -159,7 +161,7 @@
                     class="carousel border-yellow-200"
                     data-aos="zoom-in"
                   >
-                    <div class="swiper-container swiper3 w-full h-72 lg:h-96" data-delay="6000">
+                    <div class="swiper-container  w-full h-72 lg:h-96" data-delay="6000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
@@ -403,6 +405,34 @@
                </div>
             </section>
 
+            <!--section REVIEW -->
+            <section id="review" class="h-auto p-8 scroll-mt-28 ">
+              <h2 class="text-3xl lg:text-4xl font-chonburi font-bold tracking-widest mb-4 text-red-400" data-aos="fade-right">Elles m'ont fait confiance...</h2>
+              <div class="swiper-review overflow-hidden" data-aos="fade-left">
+                <div class="swiper-wrapper flex items-center mt-6">
+                  <!-- Slides -->
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Magique, elle m'a aidé à gérer mon stress, le maquillage a tenu toute la journée. Je suis très satisfaite de ton travail et j'ai reçu beaucoup de compliments de la part des invités. Si c'était à refaire je n'hésiterais pas.</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Fabina</footer>
+                  </div>
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Je me suis sentie en confiance, rassurée, détendue. J'ai apprécié la qualité du maquillage, le professionalisme, l'attention et l'écoute. Le désir de vous sublimer...</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Basilia</footer>
+                  </div>
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Un moment de détente. J'ai apprécié le professionalisme et la bienveillance.</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Isabelle D.</footer>
+                  </div>
+                </div>
+              </div>  
+            </section>
+
             <!--section CONTACT-->
 
             <section id="contact" class="h-auto lg:h-screen scroll-mt-28">
@@ -517,8 +547,23 @@
           }
         });
 
+        
     });
 
+      const reviewSwiper = new Swiper('.swiper-review',{
+          loop: true,
+          autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+          },
+          flipEffect: {
+            slideShadows: true, // Ajoute des ombres pour l'effet
+            limitRotation: true, // Limite la rotation des slides
+          },
+          grabCursor: true,
+          effect: 'flip',
+          speed: 800,
+        });
   
       </script>
       
