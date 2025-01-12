@@ -24,7 +24,7 @@ header {
 
 footer {
     font-family: "Chonburi";
-    margin: 10px 10px;
+    margin: 10px;
     color: #FAE6E1;
 }
 
@@ -38,8 +38,9 @@ footer {
     -webkit-background-size: cover;
     background-size: cover; 
     background-position: center center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -76,10 +77,65 @@ footer {
     display: flex;
     justify-content: right;
     text-transform: uppercase;
-    gap: 2vw; /*espace les liens*/
+    gap: 2vw;
     margin: 0 30px;
     letter-spacing: 0.1vw; 
 }
+
+/* Texte superposé */
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    z-index: 2;
+    pointer-events: none; 
+  }
+
+  /* Texte en haut */
+.top-text{
+  font-family: 'Amarante', sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+  text-align: left;
+  margin-left: 310px;
+  margin-top: 150px;
+}
+
+/* Texte en bas */
+.bottom-text {
+    font-family: 'Amarante', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: right; 
+    margin-right: 290px; 
+    margin-bottom: 70px; 
+}
+
+@media (max-width: 768px) {
+    .top-text {
+      font-size: 3rem;
+      margin-left: 50px;
+      margin-top: 150px;
+    }
+  
+    .bottom-text {
+      font-size: 3rem;
+      margin-right: 20%;
+      margin-bottom: 20%;
+    }
+}
+
+
 
 .lienMenu {
     @apply font-chonburi font-bold tracking-widest text-base lg:text-2xl lg:text-red-400 text-white hover:text-red-300 no-underline uppercase;
@@ -160,7 +216,6 @@ footer {
 
 .circle {
     position: absolute;
-    position: fixed;
     z-index: 0;
     border-radius: 50%;
     animation: ondes 15s infinite;

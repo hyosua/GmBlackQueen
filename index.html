@@ -36,57 +36,56 @@
                
             <header>
                 
-                <!-- barre de navigation-->
-                <nav id="nav" class="bg-red-400/85 w-full h-24 !fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent ">
-                    <div class="flex gap-20 justify-center items-center h-full mx-auto px-4 py-2">
-                        <a href="#accueil"><img src="../assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto" data-aos="fade-right"></a>
+              <!-- barre de navigation-->
+              <nav id="nav" class="bg-red-400/85 w-full h-24 !fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent ">
+                  <div class="flex gap-20 justify-center items-center h-full mx-auto px-4 py-2">
+                      <a href="#accueil"><img src="../assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto" data-aos="fade-right" data-aos-duration="1000"></a>
 
-                        <!-- liens menu horizontal -->
-                        <ul class="hidden lg:flex  space-x-20">
-                        
-                            <li data-aos="fade-right"><a class="lienMenu" href="#accueil" >Accueil</a></li>
-                            <li data-aos="fade-right"><a class="lienMenu" href="#services" >Services</a></li>
-                            <li data-aos="fade-down"><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
-                            <li data-aos="fade-left"><a class="lienMenu" href="#portfolio">Portfolio</a></li>
-                            <li data-aos="fade-left"><a class="lienMenu" href="#contact">Contact</a></li>
-                        </ul> 
+                      <!-- liens menu horizontal -->
+                      <ul class="hidden lg:flex  space-x-20">
+                      
+                          <li data-aos="fade-right"><a class="lienMenu" href="#accueil" >Accueil</a></li>
+                          <li data-aos="fade-right"><a class="lienMenu" href="#services" >Services</a></li>
+                          <li data-aos="fade-down" ><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#contact">Contact</a></li>
+                      </ul> 
 
-                        <!-- menu burger-->
-                        <div id="menu-burger" class="m-8 ml-auto lg:hidden cursor-pointer" data-aos="fade-left">
-                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
-                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
-                            <span class="block w-6 h-1 bg-white transition-transform"></span>
-                        </div>
-                    </div>
+                      <!-- menu burger-->
+                      <div id="menu-burger" class="m-8 ml-auto lg:hidden cursor-pointer" data-aos="fade-left" data-aos-duration="1000">
+                          <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                          <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                          <span class="block w-6 h-1 bg-white transition-transform"></span>
+                      </div>
+                  </div>
 
-                    <!-- menu latéral -->
-                    <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16 p-4 z-50">
-                        <!--  fixed    -->   
-                        <ul class="p-4 text-white space-y-10">
-                            
-                            <li ><a class="lienMenu" href="#accueil">Accueil</a></li>
-                            <li><a class="lienMenu" href="#services" >Services</a></li>
-                            <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
-                            <li><a class="lienMenu" href="#portfolio">Portfolio</a></li>
-                            <li><a class="lienMenu" href="#contact">Contact</a></li>
-                        </ul>       
-                    </div>  
-                </nav>
+                  <!-- menu latéral -->
+                  <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16 p-4 z-50">
+                      <!--  fixed    -->   
+                      <ul class="p-4 text-white space-y-10">
+                          
+                          <li ><a class="lienMenu" href="#accueil">Accueil</a></li>
+                          <li><a class="lienMenu" href="#services" >Services</a></li>
+                          <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                          <li><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li><a class="lienMenu" href="#contact">Contact</a></li>
+                      </ul>       
+                  </div>  
+              </nav>
                 
                 
-                
-
-                <!-- cercles animés -->
-                  <div class="circle medium shade1"></div>
-                  <div class="circle large shade1"></div>
-                  <div class="circle xlarge shade1"></div>
+               <!-- Textes superposés -->
+                <div class="text-overlay">
+                  <div class="top-text" data-aos="fade-down-right" data-aos-duration="1500" data-aos-delay="200">Make<br>Up</div>
+                  <div class="bottom-text" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Artist</div>
+                </div>
+              <!-- cercles animés -->
+                <div class="circle medium shade1"></div>
+                <div class="circle large shade1"></div>
+                <div class="circle xlarge shade1"></div>
                 
                 
             </header>
-
-                <button id="bouton-scroll" class="absolute bottom-4 right-10 hover:animate-none">
-                    <img src="../assets/down-button2.svg" alt="bouton scroll" class="w-16 lg:w-20 h-auto hover:scale-105 transition-transform animate-bounce" />
-                </button>
         </section>
 
         <main class="flex-grow z-10 bg-black">
@@ -410,10 +409,10 @@
 
                
                   
-                <div id="contact-section" style="background-image: url(../assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-6 p-8 lg:m-40 gap-20 h-auto lg:h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out" data-aos="zoom-in">
+                <div id="contact-section" style="background-image: url(/assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-6 p-8 lg:m-40 gap-10 h-auto lg:h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out" data-aos="zoom-in">
                     
-                    <div class="w-full flex justify-center relative" data-aos="zoom-left-out">
-                        <img class="rounded-xl object-cover object-[5%_15%] w-72 h-72  lg:h-full lg:w-full" alt="maquillage mariée" src="../assets/img/mariee2.jpg">
+                    <div class="w-full flex justify-center relative" data-aos="fade-down-right">
+                        <img class="rounded-xl object-cover object-[5%_15%] w-72 h-72  lg:h-full lg:w-full" alt="maquillage mariée" src="/assets/img/mariee2.jpg">
                     </div>
 
                     <div id="form-conteneur"  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center justify-center shadow-xl transition-all duration-700 ease-in-out" data-aos="zoom-out">
@@ -516,17 +515,6 @@
                 allowTouchMove: true, 
             }
           }
-        });
-
-        const swiperFolio = new Swiper('.swiper-folio', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
         });
 
     });

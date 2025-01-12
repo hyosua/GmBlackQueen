@@ -16,24 +16,7 @@ menuBurger.addEventListener('click', () => {
     }
 });
 
-/*
-window.addEventListener('scroll', () => { //Changement de l'aspect de la barre de Nav au scroll
-    const barreNav = document.getElementById('nav');
-    
-    const ifScrolled = window.scrollY > 50;
-    
-    barreNav.classList.toggle("scrolled", ifScrolled);
-    liens.forEach((lien) => {
-        lien.classList.toggle("scrolled", ifScrolled)
-    });
-    
-});
-*/
-//Animation du Bouton Scroll
-document.getElementById('bouton-scroll').addEventListener('click', function() {
-    document.getElementById('services').scrollIntoView({behavior: 'smooth'});
-    document.getElementById('bouton-scroll').classList.add('hidden');
-});
+
 
 liens.forEach(link => { //pour chaque lien, effect scrollIntoView
   const linkTarget = link.getAttribute('href').substring(1);
