@@ -7,7 +7,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Chonburi&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
-        <link rel="preload" as="image" href="/assets/img/hero_bg_lg.webp">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GmBlackqueen</title>
@@ -22,13 +21,23 @@
 
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="../assets/scripts.js" defer></script>
+        <script src="/assets/scripts.js" defer></script>
         <!--  AOS JS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
     </head>
 
-    <body class="bg-black flex flex-col min-h-screen">
+    <body class=" bg-black flex flex-col min-h-screen">
+
+      <div id="logo-loader">
+        <video autoplay loop muted playsinline class="loader-video">
+          <source src="/assets/logo/lg-loader2.mp4" media="(min-width: 768px)" type="video/mp4">
+          <source src="/assets/logo/sm-loader2.mp4" media="(max-width: 768px)" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div id="content">
 
         <!--ACCUEIL-->
 
@@ -515,15 +524,29 @@
             ©2024 GMBLACKQUEEN
         </footer>         
       
+      </div>
     </body>
     <script>
-      AOS.init({
-        mirror: true,
-        once: false,
-        delay: 50,
-        duration: 800,
-        easing: 'ease-in-out',
+
+      document.addEventListener("DOMContentLoaded", () => {//Attendre que le loader se charge avant de charger les animations
+        
+          const logoLoader = document.getElementById('logo-loader');
+          const content = document.getElementById('content');
+
+              setTimeout(() => {
+                  logoLoader.style.display = "none";
+                  content.classList.remove("aos-disabled");
+                  content.style.opacity = 1;
+                  AOS.init({
+                    mirror: true,
+                    once: false,
+                    delay: 50,
+                    duration: 800,
+                    easing: 'ease-in-out',
+                  });
+              }, 4000);
       });
+      
     document.querySelectorAll('.swiper-container').forEach((carousel) => {
         const delay = carousel.getAttribute('data-delay') || 3000;
         new Swiper(carousel, {
@@ -546,8 +569,6 @@
             }
           }
         });
-
-        
     });
 
       const reviewSwiper = new Swiper('.swiper-review',{

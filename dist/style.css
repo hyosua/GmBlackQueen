@@ -600,10 +600,6 @@ video {
   top: 0px;
 }
 
-.right-4{
-  right: 1rem;
-}
-
 .z-0{
   z-index: 0;
 }
@@ -626,10 +622,6 @@ video {
 
 .z-50{
   z-index: 50;
-}
-
-.m-0{
-  margin: 0px;
 }
 
 .m-12{
@@ -686,20 +678,16 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
 
 .mt-auto{
   margin-top: auto;
-}
-
-.mt-4{
-  margin-top: 1rem;
-}
-
-.mt-6{
-  margin-top: 1.5rem;
 }
 
 .block{
@@ -807,20 +795,12 @@ video {
   width: 100%;
 }
 
-.w-60{
-  width: 15rem;
-}
-
 .max-w-\[calc\(100\%-18px\)\]{
   max-width: calc(100% - 18px);
 }
 
 .max-w-full{
   max-width: 100%;
-}
-
-.max-w-128{
-  max-width: 32rem;
 }
 
 .flex-grow{
@@ -935,6 +915,12 @@ video {
   gap: 1rem;
 }
 
+.space-x-16 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(4rem * var(--tw-space-x-reverse));
+  margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-20 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(5rem * var(--tw-space-x-reverse));
@@ -945,12 +931,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
-.space-x-16 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(4rem * var(--tw-space-x-reverse));
-  margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden{
@@ -1350,6 +1330,26 @@ footer {
   font-family: "Chonburi";
   margin: 10px;
   color: #FAE6E1;
+}
+
+#logo-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Une fois le contenu affiché */
+
+#content {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
 /* ID */

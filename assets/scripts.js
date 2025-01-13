@@ -1,6 +1,8 @@
-//                                  
-/*              MENU            */
-//
+
+
+
+
+//MENU
 
 const menuBurger = document.getElementById('menu-burger');
 const menu = document.getElementById('menu');
@@ -30,15 +32,7 @@ liens.forEach(link => { //pour chaque lien, effect scrollIntoView
 
 });
 
-//                                  
-/*              CAROUSEL            */
-//
-
-
-//                                  
-/*              FORMULAIRE            */
-//
-
+//FORMULAIRE
 document.getElementById("formulaire-contact").addEventListener("submit", async function (event) {
         event.preventDefault();
 
