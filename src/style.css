@@ -13,8 +13,6 @@ html, body {
 }
 
 header {
-    /*text-shadow: 0 0 4px black;*/
-    /*background-color: white;*/
     height: 100vh;  
     display: flex;
     flex-direction: column;
@@ -42,7 +40,7 @@ footer {
 
 
 
-/* Une fois le contenu affiché */
+/* classe permettant d'afficher le contenu après chargement du loader */
 #content {
   display: block;
   opacity: 0;
@@ -101,7 +99,7 @@ footer {
     letter-spacing: 0.1vw; 
 }
 
-/* Texte superposé */
+/* Make Up Artist, texte du hero */
 
 .text-overlay {
     position: absolute;
@@ -116,7 +114,7 @@ footer {
     pointer-events: none; 
   }
 
-  /* Texte en haut */
+  /* Make Up */
 .top-text{
   font-family: 'Amarante', sans-serif;
   font-size: 5rem;
@@ -128,7 +126,7 @@ footer {
   margin-top: 150px;
 }
 
-/* Texte en bas */
+/* Artist  */
 .bottom-text {
     font-family: 'Amarante', sans-serif;
     font-size: 5rem;
@@ -159,13 +157,6 @@ footer {
 .lienMenu {
     @apply font-chonburi font-bold tracking-widest text-base lg:text-2xl lg:text-red-400 text-white hover:text-red-300 no-underline uppercase;
 }
-.lienMenu.scrolled {
-    @apply text-white transition duration-1000 ease-in-out hover:text-yellow-200;
-}
-
-#nav.scrolled {
-    @apply mx-2 lg:px-4  w-full h-32 fixed top-0 flex flex-col z-50 transition duration-1000 ease-in-out bg-red-400 text-white;
-}
 
 
 .menu-hidden {
@@ -182,32 +173,7 @@ footer {
     transition: transform 0.3s ease-in-out; /* Transition fluide */
   }
 
-.column {
-    padding: 20px;
-    width: 33.3%;
-    border-width: 0px;
-    @apply border-red-400;
-    border-style: solid;
-    border-radius: 5px;
-    background-color: #0f0f0f;
-    
-    
 
-}
-
-.imgHover {
-    -webkit-transform: scale(1.2);
-	transform: scale(1.2);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-    @apply rounded-md;
-}
-    
-.imgHover:hover {
-    
-    -webkit-transform: scale(1);
-	transform: scale(1);
-}
 
 /*      CAROUSEL        */
 
@@ -277,27 +243,13 @@ footer {
     bottom: calc(50% - 400px);
 }
 
-  .shade1{
+  .shade1{ /* opacité cercles */
     opacity: 0.03;
     background: white;
   }
-  .shade2{
-    opacity: 0.5;
-  }
+
   
-  .shade3{
-    opacity: 0.7;
-  }
-  
-  .shade4{
-    opacity: 0.8;
-  }
-  
-  .shade5{
-    opacity: 0.9;
-  }
-  
-  @keyframes ondes{
+  @keyframes ondes{ /* Animation cercles */
     0%{
       transform: scale(1.0);
     }
@@ -320,7 +272,7 @@ footer {
     transition-timing-function: linear;
   }
 
-/*Pour les petits écrans */
+/* Pour les petits écrans */
 @media (max-width: 1024px) {
     #accueil {
         background-size: contain; /* Même comportement pour les petits écrans */
