@@ -1,7 +1,7 @@
 {
   "name": "gmblackqueen",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "server.cjs",
   "scripts": {
     "test": " echo \"Error: no test specified\" && exit 1",
     "build:tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
@@ -10,7 +10,6 @@
     "lint:html": "htmlhint '**/*.html",
     "start": "node server.js"
   },
-  "type": "module",
   "keywords": [],
   "author": "hyosua",
   "license": "ISC",
