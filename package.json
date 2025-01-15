@@ -8,7 +8,7 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint '**/*.css'",
     "lint:html": "htmlhint '**/*.html",
-    "start": "node server.js"
+    "start": "node server.cjs"
   },
   "keywords": [],
   "author": "hyosua",
