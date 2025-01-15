@@ -25,6 +25,7 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         const reponse = await fetch("https://gmblackqueen2.vercel.app/submit", {
             method : "POST",
             headers: {
+                'Accept': 'application/json',
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
