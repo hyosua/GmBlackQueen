@@ -8,8 +8,7 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint '**/*.css'",
     "lint:html": "htmlhint '**/*.html",
-    "start:server": "node server.js",
-    "start": "npm run build:tailwind && npm run start:server"
+    "start": "node server.js"
   },
   "type": "module",
   "keywords": [],

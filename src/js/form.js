@@ -22,12 +22,13 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
     button.classList.add("bg-red-400");
     
     try{
-        const reponse = await fetch("https://gmblackqueen.vercel.app/submit", {
+        const reponse = await fetch("https://gmblackqueen2.vercel.app/submit", {
             method : "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
+            mode: "no-cors",
         });
 
         const resultat = await reponse.json();
