@@ -1,19 +1,21 @@
 {
-  "name": "tailwind-template",
+  "name": "gmblackqueen",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+    "test": " echo \"Error: no test specified\" && exit 1",
+    "build:tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
     "lint:js": "eslint .",
     "lint:css": "stylelint '**/*.css'",
     "lint:html": "htmlhint '**/*.html",
-    "start": "node server.js"
+    "start:server": "node server.js",
+    "start": "npm run build:tailwind && npm run start:server"
   },
+  "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "hyosua",
   "license": "ISC",
-  "description": "",
+  "description": "site vitrine make-up artist",
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",
     "aos": "^2.3.4",

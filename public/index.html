@@ -3,14 +3,17 @@
     <head>
         <!-- INFOS DE LA PAGE -->
         <!--CSS-->
-        <link rel="stylesheet" href="./dist/style.css">
+        <link rel="stylesheet" href="../dist/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Chonburi&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site de maquillage et coiffure professionnel par GMBlackQueen">
+        <meta name="author" content="BlackQueen">
+        <meta name="keywords" content="maquillage, coiffure, mariage, Paris, BlackQueen">
         <title>GmBlackqueen</title>
-        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../public/assets/img/favicon.ico">
         <!--  AOS CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Swiper CSS -->
@@ -21,72 +24,82 @@
 
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="./assets/scripts.js" defer></script>
+        <script type="module" src="/src/js/main.js" defer></script>
         <!--  AOS JS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
     </head>
-    
 
-    <body class="bg-black flex flex-col min-h-screen">
+    <body class=" bg-black flex flex-col min-h-screen">
+
+      <div id="logo-loader">
+        <video autoplay loop muted playsinline class="loader-video">
+          <source src="/public/assets/logo/lg-loader2.mp4" media="(min-width: 768px)" type="video/mp4">
+          <source src="/public/assets/logo/sm-loader2.mp4" media="(max-width: 768px)" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div id="content">
 
         <!--ACCUEIL-->
 
-        <section id="accueil" data-aos="zoom-out">
+        <section id="accueil">
                
             <header>
                 
-                <!-- barre de navigation-->
-                <nav id="nav" class="bg-red-400/85 w-full h-24 fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent ">
-                    <div class="flex gap-20 justify-center items-center h-full mx-auto px-4 py-2">
-                        <a href="#accueil"><img src="assets/img/logo.png" alt="logo" class="h-16 lg:h-24 w-auto" data-aos="fade-right"></a>
+              <!-- barre de navigation-->
+              <nav id="nav" class="bg-red-400/85 w-full h-24 !fixed top-0 left-0 lg:backdrop-blur-sm z-40 shadow-md lg:px-4 lg:bg-transparent ">
+                  <div class="flex gap-20 justify-center items-center h-full mx-auto px-4 py-2">
+                      <a href="#accueil"><img src="../public/assets/img/logo/logo.png" alt="logo" class="h-16 lg:h-24 w-auto" data-aos="fade-right" data-aos-duration="1000"></a>
 
-                        <!-- liens menu horizontal -->
-                        <ul class="hidden lg:flex  space-x-20">
-                        
-                            <li data-aos="fade-right"><a class="lienMenu" href="#accueil" >Accueil</a></li>
-                            <li data-aos="fade-right"><a class="lienMenu" href="#services" >Services</a></li>
-                            <li data-aos="fade-down"><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
-                            <li data-aos="fade-left"><a class="lienMenu" href="#portfolio">Portfolio</a></li>
-                            <li data-aos="fade-left"><a class="lienMenu" href="#contact">Contact</a></li>
-                        </ul> 
+                      <!-- liens menu horizontal -->
+                      <ul class="hidden lg:flex  space-x-16">
+                      
+                          <li data-aos="fade-right"><a class="lienMenu" href="#accueil" >Accueil</a></li>
+                          <li data-aos="fade-right"><a class="lienMenu" href="#services" >Services</a></li>
+                          <li data-aos="fade-down" ><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#review">Témoignages</a></li>
+                          <li data-aos="fade-left"><a class="lienMenu" href="#contact">Contact</a></li>
+                      </ul> 
 
-                        <!-- menu burger-->
-                        <div id="menu-burger" class="m-8 ml-auto lg:hidden cursor-pointer" data-aos="fade-left">
-                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
-                            <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
-                            <span class="block w-6 h-1 bg-white transition-transform"></span>
-                        </div>
-                    </div>
+                      <!-- menu burger-->
+                      <div id="menu-burger" class="m-8 ml-auto lg:hidden cursor-pointer" data-aos="fade-left" data-aos-duration="1000">
+                          <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                          <span class="block w-6 h-1 bg-white mb-1 transition-transform"></span>
+                          <span class="block w-6 h-1 bg-white transition-transform"></span>
+                      </div>
+                  </div>
 
-                    <!-- menu latéral -->
-                    <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16 p-4 z-50">
-                        <!--  fixed    -->   
-                        <ul class="p-4 text-white space-y-10">
-                            
-                            <li ><a class="lienMenu" href="#accueil">Accueil</a></li>
-                            <li><a class="lienMenu" href="#services" >Services</a></li>
-                            <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
-                            <li><a class="lienMenu" href="#portfolio">Portfolio</a></li>
-                            <li><a class="lienMenu" href="#contact">Contact</a></li>
-                        </ul>       
-                    </div>  
-                </nav>
+                  <!-- menu latéral -->
+                  <div id="menu" class="bg-red-400/85  menu-hidden menu-transition top-0 right-0 h-max  rounded-lg flex flex-col items-start w-52 mt-16 p-4 z-50">
+                      <!--  fixed    -->   
+                      <ul class="p-4 text-white space-y-10">
+                          
+                          <li><a class="lienMenu" href="#accueil">Accueil</a></li>
+                          <li><a class="lienMenu" href="#services" >Services</a></li>
+                          <li><a class="lienMenu" href="#blackqueen">BlackQueen</a></li>
+                          <li><a class="lienMenu" href="#portfolio">Portfolio</a></li>
+                          <li><a class="lienMenu" href="#review">Témoignages</a></li>
+                          <li><a class="lienMenu" href="#contact">Contact</a></li>
+                      </ul>       
+                  </div>  
+              </nav>
                 
                 
-                
-
-                <!-- cercles animés -->
-                  <div class="circle medium shade1 fixed"></div>
-                  <div class="circle large shade1 fixed"></div>
-                  <div class="circle xlarge shade1 fixed"></div>
+               <!-- Textes superposés -->
+                <div class="text-overlay">
+                  <div class="top-text" data-aos="fade-down-right" data-aos-duration="1500" data-aos-delay="200">Make<br>Up</div>
+                  <div class="bottom-text" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Artist</div>
+                </div>
+              <!-- cercles animés -->
+                <div class="circle medium shade1"></div>
+                <div class="circle large shade1"></div>
+                <div class="circle xlarge shade1"></div>
                 
                 
             </header>
-
-                <button id="bouton-scroll" class="absolute bottom-4 right-10 hover:animate-none">
-                    <img src="./assets/down-button2.svg" alt="bouton scroll" class="w-16 lg:w-20 h-auto hover:scale-105 transition-transform animate-bounce" />
-                </button>
         </section>
 
         <main class="flex-grow z-10 bg-black">
@@ -94,51 +107,51 @@
             <!-- Section SERVICES-->
 
             <section id="services" class="lg:h-screen w-full lg:mt-32 scroll-mt-36">
-                <h2 class="text-2xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-8" data-aos="fade-down">
-                  Instants de Beauté
+                <h2 class="text-3xl lg:text-4xl font-chonburi font-bold tracking-widest text-red-400 text-center mt-2" data-aos="fade-down">
+                  Mes Prestations
                 </h2>
                 <!-- Conteneur principal des carousels -->
-                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly p-4 m-2 rounded-3xl">
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center lg:justify-evenly p-4 m-6 rounded-3xl">
                    <!-- CAROUSEL MAKEUP -->
                   <div
-                    style="background-image: url('./assets/img/grunge-wall.jpg')"
+                    style="background-image: url('../public/assets/img/background/grunge-wall.jpg')"
                     class="carousel border-blue-400"
                     data-aos="fade-right"
                   >
-                    <div class="swiper-container swiper1 w-full h-72 lg:h-96" data-delay="4000">
+                    <div class="swiper-container  w-full h-72 lg:h-96" data-delay="4000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/make-up1.webp"
+                            src="../public/assets/img/carousels/make-up1.webp"
                             alt="Make-up 1"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/make-up2.webp"
+                            src="../public/assets/img/carousels/make-up2.webp"
                             alt="Make-up 2"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/make-up3.webp"
+                            src="../public/assets/img/carousels/make-up3.webp"
                             alt="Make-up 3"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/make-up4.webp"
+                            src="../public/assets/img/carousels/make-up4.webp"
                             alt="Make-up 4"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/make-up5.webp"
+                            src="../public/assets/img/carousels/make-up5.webp"
                             alt="Make-up 5"
                             class="w-full h-full object-cover"
                           />
@@ -156,37 +169,37 @@
 
               <!-- CAROUSEL COIFFURE -->
                   <div
-                    style="background-image: url('./assets/img/grunge-wall.jpg')"
+                    style="background-image: url('../public/assets/img/background/grunge-wall.jpg')"
                     class="carousel border-yellow-200"
                     data-aos="zoom-in"
                   >
-                    <div class="swiper-container swiper3 w-full h-72 lg:h-96" data-delay="6000">
+                    <div class="swiper-container  w-full h-72 lg:h-96" data-delay="6000">
                       <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/hair6.webp"
+                            src="../public/assets/img/carousels/hair6.webp"
                             alt="Chignon sophistiqué adapté pour des événements comme les mariages"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/hair2.webp"
+                            src="../public/assets/img/carousels/hair2.webp"
                             alt="Coiffure élégante avec des boucles bien définies"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/hair3.webp"
+                            src="../public/assets/img/carousels/hair3.webp"
                             alt="Coiffure glamour avec des ondulations volumineuses"
                             class="w-full h-full object-cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
-                            src="./assets/img/carousels/hair5.webp"
+                            src="../public/assets/img/carousels/hair5.webp"
                             alt="Chignon simple et élégant pour mariage"
                             class="w-full h-full object-cover"
                           />
@@ -204,7 +217,7 @@
 
                   <!-- CAROUSEL MARIEE -->
                   <div
-                  style="background-image: url('./assets/img/grunge-wall.jpg')"
+                  style="background-image: url('../public/assets/img/background/grunge-wall.jpg')"
                   class="carousel   border-red-400"
                   data-aos="fade-left"
                 > 
@@ -213,35 +226,35 @@
                     <!-- Slides -->
                     <div class="swiper-slide">
                       <img
-                        src="./assets/img/carousels/mariee1.webp"
+                        src="../public/assets/img/carousels/mariee1.webp"
                         alt="Chignon sophistiqué adapté pour des événements comme les mariages"
                         class="w-full h-full object-cover"
                       />
                     </div>
                     <div class="swiper-slide">
                       <img
-                        src="./assets/img/carousels/mariee2.webp"
+                        src="../public/assets/img/carousels/mariee2.webp"
                         alt="Coiffure élégante avec des boucles bien définies"
                         class="w-full h-full object-cover"
                       />
                     </div>
                     <div class="swiper-slide">
                       <img
-                        src="./assets/img/carousels/mariee3.webp"
+                        src="../public/assets/img/carousels/mariee3.webp"
                         alt="Coiffure glamour avec des ondulations volumineuses"
                         class="w-full h-full object-cover"
                       />
                     </div>
                     <div class="swiper-slide">
                       <img
-                        src="./assets/img/carousels/mariee4.webp"
+                        src="../public/assets/img/carousels/mariee4.webp"
                         alt="Coiffure moderne avec un brushing lisse et brillant"
                         class="w-full h-full object-cover"
                       />
                     </div>
                     <div class="swiper-slide">
                       <img
-                        src="./assets/img/carousels/mariee5.webp"
+                        src="../public/assets/img/carousels/mariee5.webp"
                         alt="Chignon simple et élégant pour mariage"
                         class="w-full h-full object-cover"
                       />
@@ -263,12 +276,12 @@
               
             <!--section BLACKQUEEN-->
 
-            <section id="blackqueen">
+            <section id="blackqueen" class="scroll-mt-28">
                 <div class="lg:h-screen w-full flex flex-col lg:flex-row items-center justify-between px-5 lg:px-10 scroll-mt-36">
                     <!-- Section gauche avec les cercles et l'image -->
                     <div class="w-full lg:w-1/2 flex justify-center items-center" data-aos="fade-down-right">
                         <div class="absolute z-30 w-72 h-72 lg:w-128 lg:h-128 bg-center bg-cover"
-                                        style="background-image: url('./assets/img/blackqueen/blackqueen.png');">
+                                        style="background-image: url('../public/assets/img/blackqueen/blackqueen.png');">
                                     </div>
                         <!-- Cercles animés -->
                         <div class="flex justify-center items-center z-0 w-64 h-64 lg:w-128 lg:h-128 rounded-full  bg-red-400  animate-ondes">
@@ -284,7 +297,7 @@
                     <div class="flex flex-col justify-center w-full lg:w-1/2 border-2 border-red-400 m-12 p-8 lg:m-40  rounded-3xl" data-aos="fade-up-left">
                         <h2 class="text-3xl lg:text-4xl font-chonburi font-bold tracking-widest mb-4 text-yellow-200">Qui Suis-Je ?</h2>
                         <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
-                            Je suis <span class="text-red-400 tracking-widest"><strong>BlackQueen</strong></span>, et ma passion pour le maquillage a commencé à l'âge de 22 ans, lorsque j'ai eu la chance de travailler pour la marque <span class="text-blue-400 tracking-widest font-bold">Black Up</span> à <span class="text-yellow-200 tracking-widest font-bold">Kinshasa</span>.<br> Ce fut une révélation : maquiller les autres me permet de leur apporter de la <span class="text-red-400 tracking-widest font-bold">joie</span> et de la <span class="text-blue-400 tracking-widest font-bold">confiance en soi</span>, et cela me rend profondément heureuse. C'est en <span class="text-yellow-200 tracking-widest font-bold">partageant ce bonheur</span> que j'ai découvert ma vocation.
+                            Je suis <span class="text-red-400 tracking-widest"><strong>BlackQueen</strong></span>, et ma passion pour le maquillage a commencé à l'âge de 22 ans, lorsque j'ai eu la chance de travailler pour la marque <span class="text-red-400 tracking-widest font-bold">Black Up</span> à <span class="text-yellow-200 tracking-widest font-bold">Kinshasa</span>.<br> Ce fut une révélation : maquiller les autres me permet de leur apporter de la <span class="text-red-400 tracking-widest font-bold">joie</span> et de la <span class="text-yellow-200 tracking-widest font-bold">confiance en soi</span>, et cela me rend profondément heureuse. C'est en <span class="text-red-400 tracking-widest font-bold">partageant ce bonheur</span> que j'ai découvert ma vocation.
                         </p>
 
                         <!-- <p class="font-amarante  tracking-wider text-lg text-justify indent-10 leading-loose text-white">
@@ -295,108 +308,108 @@
             </section>
 
             <!--section PORTFOLIO-->
-            <section id="portfolio" class="p-8">
+            <section id="portfolio" class="p-8 scroll-mt-20">
               <h2 class="text-3xl lg:text-4xl font-chonburi font-bold tracking-widest mb-4 text-red-400" data-aos="fade-right">Mes Réalisations</h2>
 
               <!-- Gallerie -->
                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="grid gap-4">
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-right">
-                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                      <source src="./assets/vid/4.mp4" type="video/mp4">
+                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                      <source src="/public/assets/vids/2.mp4" type="video/mp4">
                       Votre navigateur ne supporte pas les vidéos.
                     </video>
                   </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-right">
-                      <img src="./assets/img/portfolio/folio10.webp" alt="Portrait glamour d'une femme coiffée d'une perruque avec longues boucles et des mèches roses et noires, maquillage chic avec des tons dorés et lèvres rosées, portant une élégante robe rouge" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio10.webp" alt="Portrait glamour d'une femme coiffée d'une perruque avec longues boucles et des mèches roses et noires, maquillage chic avec des tons dorés et lèvres rosées, portant une élégante robe rouge" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-right">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/7.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/11.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-right">
-                      <img src="./assets/img/portfolio/folio6b.webp" alt="Profil d'une femme élégante portant des nattes collées en motifs floraux" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio6b.webp" alt="Profil d'une femme élégante portant des nattes collées en motifs floraux" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-right">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/1.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/1.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                   </div>
                   <div class="grid gap-4">
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                    <img src="./assets/img/portfolio/folio12.webp" alt="Portrait glamour d'une femme portant un maquillage Nude" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                    <img src="/public/assets/img/portfolio/folio12.webp" alt="Portrait glamour d'une femme portant un maquillage Nude" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                   </div>
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                      <source src="./assets/vid/6.mp4" type="video/mp4">
+                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                      <source src="/public/assets/vids/6.mp4" type="video/mp4">
                       Votre navigateur ne supporte pas les vidéos.
                     </video>
                   </div>
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                    <img src="./assets/img/portfolio/folio5.webp" alt="Portrait d'une femme vue de dos portant une coiffure de nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                    <img src="/public/assets/img/portfolio/folio5.webp" alt="Portrait d'une femme vue de dos portant une coiffure de nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                   </div>
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                      <source src="./assets/vid/8.mp4" type="video/mp4">
+                    <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                      <source src="/public/assets/vids/8.mp4" type="video/mp4">
                       Votre navigateur ne supporte pas les vidéos.
                     </video>
                   </div>
                   <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                    <img src="./assets/img/portfolio/folio11.webp" alt="Portrait d'une femme vue de dos, portant un chignon étoile et des nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                    <img src="/public/assets/img/portfolio/folio11.webp" alt="Portrait d'une femme vue de dos, portant un chignon étoile et des nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                   </div>
                   </div>
                   <div class="grid gap-4">
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-rigth">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/2.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/5.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-rigth">
-                      <img src="./assets/img/portfolio/folio1.webp" alt="Portrait d'une femme vue de dos portant une coiffure de nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio1.webp" alt="Portrait d'une femme vue de dos portant une coiffure de nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-rigth">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/9.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/9.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-rigth">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/3.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/3.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-rigth">
-                      <img src="./assets/img/portfolio/folio8.webp" alt="Portrait d'une femme vue de dos, portant un chignon étoile et des nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio8.webp" alt="Portrait d'une femme vue de dos, portant un chignon étoile et des nattes collées" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                   </div>
                   <div class="grid gap-4">
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                      <img src="./assets/img/portfolio/folio7.webp" alt="Portrait d'une femme maquillée avec élégance, arborant un maquillage Soft-Glam aux tons roses et rouges avec un rouge à lèvres profond et des cils volumineux." class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio7.webp" alt="Portrait d'une femme maquillée avec élégance, arborant un maquillage Soft-Glam aux tons roses et rouges avec un rouge à lèvres profond et des cils volumineux." class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/11.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/7.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/5.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/4.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                      <img src="./assets/img/portfolio/folio2.webp" alt="Portrait glamour d'une femme portant un maquillage Nude" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
+                      <img src="/public/assets/img/portfolio/folio2.webp" alt="Portrait glamour d'une femme portant un maquillage Nude" class="max-w-full h-auto object-cover transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md" data-aos="zoom-out-left">
-                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline>
-                        <source src="./assets/vid/10.mp4" type="video/mp4">
+                      <video class="max-w-full h-auto object-cover" autoplay loop muted playsinline loading="lazy">
+                        <source src="/public/assets/vids/10.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas les vidéos.
                       </video>
                     </div>
@@ -404,55 +417,83 @@
                </div>
             </section>
 
+            <!--section REVIEW -->
+            <section id="review" class="h-auto p-8 scroll-mt-28 ">
+              <h2 class="text-3xl lg:text-4xl font-chonburi font-bold tracking-widest mb-4 text-red-400" data-aos="fade-right">Elles m'ont fait confiance...</h2>
+              <div class="swiper-review overflow-hidden" data-aos="fade-left">
+                <div class="swiper-wrapper flex items-center mt-6">
+                  <!-- Slides -->
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Magique, elle m'a aidé à gérer mon stress, le maquillage a tenu toute la journée. Je suis très satisfaite de ton travail et j'ai reçu beaucoup de compliments de la part des invités. Si c'était à refaire je n'hésiterais pas.</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Fabina</footer>
+                  </div>
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Je me suis sentie en confiance, rassurée, détendue. J'ai apprécié la qualité du maquillage, le professionalisme, l'attention et l'écoute. Le désir de vous sublimer...</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Basilia</footer>
+                  </div>
+                  <div class="swiper-slide w-full">
+                    <blockquote class="border-2 border-red-400 text-center p-6 italic text-xl rounded-xl">
+                      <p class="text-white">Un moment de détente. J'ai apprécié le professionalisme et la bienveillance.</p>
+                    </blockquote>
+                    <footer class="text-center mt-2">Isabelle D.</footer>
+                  </div>
+                </div>
+              </div>  
+            </section>
+
             <!--section CONTACT-->
 
-            <section id="contact" class="h-auto lg:h-screen scroll-mt-36">
+            <section id="contact" class="h-auto lg:h-screen scroll-mt-28">
 
                
                   
-                <div id="contact-section" style="background-image: url(./assets/img/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-6 p-8 lg:m-40 gap-20 h-auto lg:h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out" data-aos="zoom-in">
+                <div id="contact-section" style="background-image: url(/public/assets/img/background/grunge-wall.jpg)" class ="flex flex-col lg:flex-row bg-zinc-900 m-6 p-8 lg:m-40 gap-10 h-auto lg:h-3/4 border-red-400 border bg-fixed bg-cover rounded-3xl transition-all duration-700 ease-in-out" data-aos="zoom-in">
                     
-                    <div class="w-full flex justify-center relative" data-aos="zoom-left-out">
-                        <img class="rounded-xl object-cover object-[5%_15%] w-72 h-72  lg:h-full lg:w-full" alt="maquillage mariée" src="./assets/img/mariee2.jpg">
+                    <div class="w-full flex justify-center relative" data-aos="fade-down-right">
+                        <img class="rounded-xl object-cover object-[5%_15%] w-72 h-72  lg:h-full lg:w-full" alt="maquillage mariée" src="/public/assets/img/contact-form.jpg">
                     </div>
 
                     <div id="form-conteneur"  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center justify-center shadow-xl transition-all duration-700 ease-in-out" data-aos="zoom-out">
 
-                        <h3 class="text-center font-bold text-3xl text-white m-2 lg:m-8">Votre Moment Beauté Commence ici</h3>
+                        <h3 class="text-center font-bold text-3xl text-white m-2 lg:m-8" data-aos="zoom-out-right"  >Votre Moment Beauté Commence Ici</h3>
 
                          <!--    Formulaire     -->
-                        <form id="formulaire-contact" method="POST" action="https://gmblackqueen-serveur.onrender.com/submit" class="w-full lg:p-5 flex flex-col items-center shadow-md">
+                        <form id="formulaire-contact" method="POST" action="https://gmblackqueen.vercel.app/" class="w-full lg:p-5 flex flex-col items-center shadow-md">
                             <div id ="champs-formulaire" class="flex flex-wrap">
 
                                 <!--    Nom     -->
-                                <div class="w-full relative mt-8 px-3 md:w-1/2">
-                                    <input id="name" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="name" placeholder=" ">
+                                <div class="w-full relative mt-8 px-3 md:w-1/2" data-aos="fade-right">
+                                    <input id="name" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="name" placeholder=" " >
                                     <label for="name" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Nom</label>
                                     
                                 </div>
 
                                  <!--    Prénom     -->
-                                <div class="w-full relative mt-8 px-3 md:w-1/2">
+                                <div class="w-full relative mt-8 px-3 md:w-1/2" data-aos="fade-left">
                                     <input id="prenom" required class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="prenom" placeholder=" " >
                                     <label for="prenom" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Prénom</label>
                                 </div>
                                 
                                  <!--    Téléphone     -->
-                                <div class="w-full relative mt-8 px-3 ">
+                                <div class="w-full relative mt-8 px-3 "  data-aos="fade-right">
                                     <input id="tel" required class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="number" autocomplete="off" autocorrect="off" name="tel" placeholder=" ">
                                     <label for="tel" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Téléphone</label>
                                     
                                 </div>
 
                                  <!--    E-mail     -->
-                                <div class="w-full relative mt-8 px-3">
-                                    <input id="mail" class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="email"  autocomplete="off" autocorrect="off" name="mail" placeholder=" " >
+                                <div class="w-full relative mt-8 px-3"  data-aos="fade-left">
+                                    <input id="mail" class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="email"  autocomplete="off" autocorrect="off" name="mail" placeholder=" ">
                                     <label for="mail" required class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">E-mail</label>
                                 </div>
                                 
                                  <!--    Description     -->
-                                <div class="w-full relative mt-8 px-3">
-                                    <textarea id="description" rows="3" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="description" placeholder=" "></textarea>
+                                <div class="w-full relative mt-8 px-3" data-aos="fade-right"  >
+                                    <textarea id="description" rows="3" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="description" placeholder=" " ></textarea>
                                     <label for="description" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Décris-moi ce que tu souhaites...</label>
                                     
                                 </div>
@@ -461,6 +502,7 @@
                                     id="submitButton"
                                     class="mt-8 w-full m-4 bg-red-500 hover:bg-red-400 text-white rounded-md shadow-xl px-8 py-2 font-black flex items-center justify-center"
                                     type="submit"
+                                    data-aos="fade-up-left"  
                                     >
                                     <span id="buttonText">Envoyer</span>
                                     <div
@@ -486,15 +528,29 @@
             ©2024 GMBLACKQUEEN
         </footer>         
       
+      </div>
     </body>
     <script>
-      AOS.init({
-        mirror: true,
-        once: false,
-        delay: 50,
-        duration: 800,
-        easing: 'ease-in-out',
+
+      document.addEventListener("DOMContentLoaded", () => {//Attendre que le loader se charge avant de charger les animations
+        
+          const logoLoader = document.getElementById('logo-loader');
+          const content = document.getElementById('content');
+
+              setTimeout(() => {
+                  logoLoader.style.display = "none";
+                  content.classList.remove("aos-disabled");
+                  content.style.opacity = 1;
+                  AOS.init({
+                    mirror: true,
+                    once: false,
+                    delay: 50,
+                    duration: 800,
+                    easing: 'ease-in-out',
+                  });
+              }, 4000);
       });
+      
     document.querySelectorAll('.swiper-container').forEach((carousel) => {
         const delay = carousel.getAttribute('data-delay') || 3000;
         new Swiper(carousel, {
@@ -517,20 +573,22 @@
             }
           }
         });
-
-        const swiperFolio = new Swiper('.swiper-folio', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
     });
 
+      const reviewSwiper = new Swiper('.swiper-review',{
+          loop: true,
+          autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+          },
+          flipEffect: {
+            slideShadows: true, // Ajoute des ombres pour l'effet
+            limitRotation: true, // Limite la rotation des slides
+          },
+          grabCursor: true,
+          effect: 'flip',
+          speed: 800,
+        });
   
       </script>
       

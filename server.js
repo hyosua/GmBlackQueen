@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
@@ -24,8 +25,8 @@ app.post("/submit", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail", // ou "smtp.mail.yahoo.com", etc.
     auth: {
-      user: "colleterhyosua@gmail.com", // Remplacez par votre adresse email
-      pass: "ozgq lxme obzc hjbj", // Remplacez par votre mot de passe ou App Password
+      user: process.env.GMAIL_USER, // Remplacez par votre adresse email
+      pass: process.env.APP_PASS, // Remplacez par votre mot de passe ou App Password
     },
     tls: {
       rejectUnauthorized: false, // Ignore les certificats auto-signés
@@ -34,9 +35,9 @@ app.post("/submit", async (req, res) => {
 
   // Configurer le contenu du mail
   const mailOptions = {
-    from: "colleterhyosua@gmail.com",
+    from: process.env.GMAIL_USER,
     to: "colleterhyosua@gmail.com", // Adresse où vous souhaitez recevoir le mail
-    subject: "Nouveau message via le formulaire de contact",
+    subject: "Nouveau message via le formulaire de contact de gmblackqueen.fr",
     text: `
       Nom: ${name}
       Prénom: ${prenom}
