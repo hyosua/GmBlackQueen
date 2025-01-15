@@ -1,4 +1,4 @@
-require("dotenv").config();
+const dotenv = require('dotenv');
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
@@ -7,16 +7,29 @@ const corsOptions = {
   origin: "*", // Permet toutes les origines, sinon remplacez "*" par l'URL de votre frontend : "http://127.0.0.1:5500"
 };
 
+dotenv.config(); //chargement des variables d'environnement
 const app = express();
 const PORT = process.env.PORT || 3000  ;
-
+app.use(bodyParser.json()); // Pour parser le JSON dans le corps de la requête
 // Middleware
 app.use(cors(corsOptions));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+  // Configurer le transporteur pour l'envoi de mail
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "colleterhyosua@gmail.com", // Remplacez par votre adresse email
+      pass: "eeji zjiv iceb qeqz", // Remplacez par votre mot de passe ou App Password
+    },
+    tls: {
+      rejectUnauthorized: false, // Ignore les certificats auto-signés
+    },
+  });
 
 // Route pour recevoir les données
-app.post("/submit", async (req, res) => {
+app.post("/envoi-email", async (req, res) => {
   const { name, prenom, tel, mail, description } = req.body;
 
   // Valider les champs du formulaire
@@ -24,17 +37,7 @@ app.post("/submit", async (req, res) => {
     return res.status(400).json({ error: "Tous les champs sont requis." });
   }
 
-  // Configurer le transporteur pour l'envoi de mail
-  const transporter = nodemailer.createTransport({
-    service: "gmail", // ou "smtp.mail.yahoo.com", etc.
-    auth: {
-      user: "colleterhyosua@gmail.com", // Remplacez par votre adresse email
-      pass: "ozgq lxme obzc hjbj", // Remplacez par votre mot de passe ou App Password
-    },
-    tls: {
-      rejectUnauthorized: false, // Ignore les certificats auto-signés
-    },
-  });
+
 
   // Configurer le contenu du mail
   const mailOptions = {
@@ -62,5 +65,5 @@ app.post("/submit", async (req, res) => {
 
 // Démarrer le serveur
 app.listen(PORT, () => {
-  console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`);
+  console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
 });

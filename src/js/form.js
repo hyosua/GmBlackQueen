@@ -21,20 +21,24 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
     button.classList.remove("bg-red-500");
     button.classList.add("bg-red-400");
     
-    try{
-        const reponse = await fetch("https://gmblackqueen2.vercel.app/submit", {
-            method : "POST",
+    try {
+        const reponse = await fetch("http://localhost:3000/envoi-email", {
+            method: "POST",
             headers: {
                 'Accept': 'application/json',
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-            mode: "no-cors",
         });
-
-        const resultat = await reponse.json();
-
-        if(reponse.ok){
+    
+        let resultat = {};
+        try {
+            resultat = await reponse.json(); // Essayez de lire la réponse JSON
+        } catch (err) {
+            console.error("Erreur lors du parsing JSON:", err);
+        }
+    
+        if (reponse.ok) {
             formConteneur.removeChild(form);
             formConteneur.classList.add("p-4"); // Réduit les marges internes
             formConteneur.classList.remove("lg:p-10");
@@ -42,19 +46,20 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
             contactSection.classList.add("items-center");
             messageDiv.textContent = `Merci pour votre message. Je vous recontacterai prochainement!`;
             messageDiv.className = "text-white text-center font-bold";
-        }else{
+        } else {
             messageDiv.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
             messageDiv.className = "text-white text-center font-bold";
         }
-    }catch(error){
-            messageDiv.className = "text-white text-center font-bold";
-            messageDiv.textContent = `Erreur réseau: ${error.message}`;
-            button.disabled = false;
-            button.classList.remove("bg-red-400");
-            button.classList.add("bg-red-500");   
-            loader.classList.add("hidden");
-            buttonText.textContent = "Envoyer";
+    } catch (error) {
+        messageDiv.className = "text-white text-center font-bold";
+        messageDiv.textContent = `Erreur réseau: ${error.message}`;
+        button.disabled = false;
+        button.classList.remove("bg-red-400");
+        button.classList.add("bg-red-500");
+        loader.classList.add("hidden");
+        buttonText.textContent = "Envoyer";
     }
+    
     
 });
 
