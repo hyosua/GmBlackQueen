@@ -3,10 +3,13 @@
     <head>
         <!-- INFOS DE LA PAGE -->
         <!--CSS-->
-        <link rel="stylesheet" href="../dist/style.css">
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--  Styles CSS -->
         <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Chonburi&family=Cinzel:wght@700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../dist/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Site de maquillage et coiffure professionnel par GMBlackQueen">
@@ -21,7 +24,7 @@
         rel="stylesheet"
         href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
-
+        
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script type="module" src="/src/js/main.js" defer></script>
@@ -442,6 +445,7 @@
                     <footer class="text-center mt-2">Isabelle D.</footer>
                   </div>
                 </div>
+                
               </div>  
             </section>
 
@@ -460,9 +464,9 @@
                     <div id="form-conteneur"  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center justify-center shadow-xl transition-all duration-700 ease-in-out" data-aos="zoom-out">
 
                         <h3 class="text-center font-bold text-3xl text-white m-2 lg:m-8" data-aos="zoom-out-right"  >Votre Moment Beauté Commence Ici</h3>
-
+                        
                          <!--    Formulaire     -->
-                        <form id="formulaire-contact" method="POST" action="http://localhost:3000/envoi-email" class="w-full lg:p-5 flex flex-col items-center shadow-md">
+                        <form id="formulaire-contact" method="POST" action="https://gmblackqueen2.vercel.app/envoi-email" class="w-full lg:p-5 flex flex-col items-center shadow-md">
                             <div id ="champs-formulaire" class="flex flex-wrap">
 
                                 <!--    Nom     -->
@@ -502,7 +506,6 @@
                                     id="submitButton"
                                     class="mt-8 w-full m-4 bg-red-500 hover:bg-red-400 text-white rounded-md shadow-xl px-8 py-2 font-black flex items-center justify-center"
                                     type="submit"
-                                    data-aos="fade-up-left"  
                                     >
                                     <span id="buttonText">Envoyer</span>
                                     <div
@@ -511,15 +514,17 @@
                                     ></div>
                                 </button>
                             </div>
+                             
                         </form>
-                        
                         <!-- Réponse du serveur -->
-                        <div id="form-message" class="text-center mt-2">
-
-                        </div>
+                        <div id="form-message" class="message-container success relative">
+                          <span class="close-btn">&times;</span>
+                          <p id="form-message-text">Merci pour votre message. Je vous recontacterai prochainement!</p>
+                      </div>
                     </div>
                     
-                </div>  
+                </div> 
+                 
             </section>
         </main>
         
@@ -548,7 +553,7 @@
                     duration: 800,
                     easing: 'ease-in-out',
                   });
-              }, 4000);
+              }, 500);
       });
       
     document.querySelectorAll('.swiper-container').forEach((carousel) => {

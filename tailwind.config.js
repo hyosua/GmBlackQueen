@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./public/index.html",
     "./src/**/*.{html,js,css}",  // Inclut les fichiers .html et .js dans le dossier src
+    "./dist/**/*.{html,js,css}",
   ],
   theme: {
     extend: {

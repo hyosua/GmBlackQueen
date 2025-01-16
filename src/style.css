@@ -272,6 +272,55 @@ footer {
     transition-timing-function: linear;
   }
 
+  .message-container {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 10px auto;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message-container.success {
+    background-color: rgba(132, 240, 132, 0.356); /* Vert pour succès */
+    color: white !important;
+    border-left: 4px solid #2f855a !important;
+  }
+  
+  .message-container.error {
+    background-color: #e53e3e !important; /* Rouge pour erreur */
+    color: white !important;
+    border-left: 4px solid #c53030 !important;
+  }
+  
+  .message-container.hidden {
+    display: none;
+  }
+  
+  .message-container p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+
 /* Pour les petits écrans */
 @media (max-width: 1024px) {
     #accueil {

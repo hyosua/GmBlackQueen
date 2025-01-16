@@ -20,9 +20,13 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
     buttonText.textContent = "Envoi...";
     button.classList.remove("bg-red-500");
     button.classList.add("bg-red-400");
+
+    document.querySelector('.close-btn').addEventListener('click', function() {
+        document.getElementById('form-message').classList.add("hidden");
+    });
     
     try {
-        const reponse = await fetch("http://localhost:3000/envoi-email", {
+        const reponse = await fetch("https://gmblackqueen2.vercel.app/envoi-email", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -38,18 +42,20 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
             console.error("Erreur lors du parsing JSON:", err);
         }
     
+        const messageDiv = document.getElementById("form-message");
+        const messageText = document.getElementById("form-message-text");
+        const champsForm = document.getElementById("champs-formulaire");
+
         if (reponse.ok) {
-            formConteneur.removeChild(form);
-            formConteneur.classList.add("p-4"); // Réduit les marges internes
-            formConteneur.classList.remove("lg:p-10");
-            formConteneur.classList.add("h-56");
-            contactSection.classList.add("items-center");
-            messageDiv.textContent = `Merci pour votre message. Je vous recontacterai prochainement!`;
-            messageDiv.className = "text-white text-center font-bold";
+            messageText.textContent = "Merci pour votre message. Je vous recontacterai prochainement!";
+            messageDiv.className = "message-container success";
         } else {
-            messageDiv.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
-            messageDiv.className = "text-white text-center font-bold";
+            messageText.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
+            messageDiv.className = "message-container error";
         }
+        console.log(messageDiv.className);
+        messageDiv.classList.remove("hidden"); // Affiche le message
+        champsForm.classList.add("hidden");
     } catch (error) {
         messageDiv.className = "text-white text-center font-bold";
         messageDiv.textContent = `Erreur réseau: ${error.message}`;
