@@ -4,7 +4,7 @@
   "main": "server.cjs",
   "scripts": {
     "test": " echo \"Error: no test specified\" && exit 1",
-    "build:tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
+    "build:tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
     "lint:js": "eslint .",
     "lint:css": "stylelint '**/*.css'",
     "lint:html": "htmlhint '**/*.html",

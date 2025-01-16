@@ -640,6 +640,10 @@ video {
   z-index: 50;
 }
 
+.m-1{
+  margin: 0.25rem;
+}
+
 .m-12{
   margin: 3rem;
 }
@@ -662,10 +666,6 @@ video {
 
 .m-8{
   margin: 2rem;
-}
-
-.m-1{
-  margin: 0.25rem;
 }
 
 .mx-2{
@@ -877,6 +877,14 @@ video {
 
 .max-w-full{
   max-width: 100%;
+}
+
+.flex-shrink{
+  flex-shrink: 1;
+}
+
+.shrink{
+  flex-shrink: 1;
 }
 
 .flex-grow{
@@ -1326,6 +1334,11 @@ video {
   color: rgb(96 165 250 / var(--tw-text-opacity, 1));
 }
 
+.text-red-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+}
+
 .text-red-300{
   --tw-text-opacity: 1;
   color: rgb(252 165 165 / var(--tw-text-opacity, 1));
@@ -1334,6 +1347,11 @@ video {
 .text-red-400{
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-red-950{
@@ -1359,16 +1377,6 @@ video {
 .text-zinc-950{
   --tw-text-opacity: 1;
   color: rgb(9 9 11 / var(--tw-text-opacity, 1));
-}
-
-.text-red-500{
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
-}
-
-.text-red-200{
-  --tw-text-opacity: 1;
-  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
 }
 
 .underline{
@@ -1828,30 +1836,56 @@ footer {
   text-align: center;
 }
 
-@keyframes shake {
+@keyframes shake-yes {
   0%, 100% {
-    transform: translateX(0);
     transform: translateY(0);
   }
 
   25% {
-    transform: translateX(-10px);
     transform: translateY(-10px);
   }
 
   50% {
-    transform: translateX(10px);
     transform: translateY(10px);
   }
 
   75% {
-    transform: translateX(-10px);
     transform: translateY(-10px);
   }
 }
 
-.shake {
-  animation: shake 0.5s ease;
+@keyframes shake-no {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+.shake-yes {
+  animation: shake-yes 0.5s ease;
+}
+
+.shake-no {
+  animation: shake-no 0.5s ease;
+}
+
+.srink {
+  width: 300px;
+  /* Largeur réduite pour le message */
+  height: auto;
+  /* Hauteur ajustée au contenu restant */
+  padding: 20px;
 }
 
 /* Pour les petits écrans */
@@ -2093,14 +2127,14 @@ footer {
     line-height: 2rem;
   }
 
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-red-400{

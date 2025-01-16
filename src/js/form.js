@@ -2,9 +2,6 @@
 
 // Gestion du formulaire de contact
 
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('form-message').classList.add("hidden");
-});
 
 document.getElementById("formulaire-contact").addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -49,15 +46,19 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         const champsForm = document.getElementById("champs-formulaire");
 
         if (reponse.ok) {
-            formTitle.textContent = "Message Envoyé"
-            messageText.textContent = "Merci pour votre message. Je vous recontacterai prochainement!";
-            messageDiv.className = "message-container success";
-            champsForm.classList.add("hidden");
+            champsForm.remove();
+            formTitle.textContent = "Message Envoyé";
+            formConteneur.classList.remove("w-full");
+            formConteneur.classList.add("shrink");
+            formConteneur.classList.add('shake-yes');
+            setTimeout(() => {
+                formConteneur.classList.remove('shake-yes');
+              }, 500);
 
         } else {
-            formConteneur.classList.add('shake');
+            formConteneur.classList.add('shake-no');
             setTimeout(() => {
-                formConteneur.classList.remove('shake');
+                formConteneur.classList.remove('shake-no');
               }, 500);
             messageText.textContent = `Erreur: ${resultat.error || "impossible d'envoyer le message."}`;
             messageDiv.className = "message-container error";
@@ -71,9 +72,9 @@ document.getElementById("formulaire-contact").addEventListener("submit", async f
         messageDiv.classList.remove("hidden"); // Affiche le message
         
     } catch (error) {
-        formConteneur.classList.add('shake');
+        formConteneur.classList.add('shake-no');
         setTimeout(() => {
-            formConteneur.classList.remove('shake');
+            formConteneur.classList.remove('shake-no');
             }, 500);
         messageDiv.textContent = `Erreur réseau: ${error.message}`;
         messageDiv.className = "message-container error";

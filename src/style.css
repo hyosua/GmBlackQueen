@@ -321,27 +321,47 @@ footer {
     text-align: center;
   }
 
-  @keyframes shake {
+  @keyframes shake-yes {
     0%, 100% {
-      transform: translateX(0);
       transform: translateY(0);
     }
     25% {
-      transform: translateX(-10px);
       transform: translateY(-10px);
     }
     50% {
-      transform: translateX(10px);
       transform: translateY(10px);
     }
     75% {
-      transform: translateX(-10px);
       transform: translateY(-10px);
     }
   }
+  @keyframes shake-no {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+  }
   
-  .shake {
-    animation: shake 0.5s ease;
+  .shake-yes {
+    animation: shake-yes 0.5s ease;
+  }
+
+  .shake-no {
+    animation: shake-no 0.5s ease;
+  }
+
+  .srink {
+    width: 300px; /* Largeur réduite pour le message */
+  height: auto; /* Hauteur ajustée au contenu restant */
+  padding: 20px; 
   }
 
 /* Pour les petits écrans */
