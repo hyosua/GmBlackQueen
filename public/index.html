@@ -463,14 +463,14 @@
 
                     <div id="form-conteneur"  class="w-full flex flex-col border lg:p-10 border-red-400 rounded-xl items-center justify-center shadow-xl transition-all duration-700 ease-in-out" data-aos="zoom-out">
 
-                        <h3 class="text-center font-bold text-3xl text-white m-2 lg:m-8" data-aos="zoom-out-right"  >Votre Moment Beauté Commence Ici</h3>
+                        <h3 id="form-title" class="text-center font-bold text-2xl lg:text-3xl font-chonburi text-yellow-200 m-2 lg:m-8" data-aos="zoom-out-right">Ta Séance Beauté Sur-Mesure</h3>
                         
                          <!--    Formulaire     -->
                         <form id="formulaire-contact" method="POST" action="https://gmblackqueen2.vercel.app/envoi-email" class="w-full lg:p-5 flex flex-col items-center shadow-md">
                             <div id ="champs-formulaire" class="flex flex-wrap">
 
                                 <!--    Nom     -->
-                                <div class="w-full relative mt-8 px-3 md:w-1/2" data-aos="fade-right">
+                                <div class="w-full relative mt-2 lg:mt-8 px-3 md:w-1/2" data-aos="fade-right">
                                     <input id="name" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="name" placeholder=" " >
                                     <label for="name" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Nom</label>
                                     
@@ -489,16 +489,10 @@
                                     
                                 </div>
 
-                                 <!--    E-mail     -->
-                                <div class="w-full relative mt-8 px-3"  data-aos="fade-left">
-                                    <input id="mail" class="outline-none py-1 w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="email"  autocomplete="off" autocorrect="off" name="mail" placeholder=" ">
-                                    <label for="mail" required class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">E-mail</label>
-                                </div>
-                                
                                  <!--    Description     -->
                                 <div class="w-full relative mt-8 px-3" data-aos="fade-right"  >
                                     <textarea id="description" rows="3" required class="outline-none py-1 cursor-text w-full pl-6 text-lg text-white border-white rounded-lg border focus:border-red-400 focus:ring-2 focus:ring-red-400 bg-zinc-800/60 transition-all peer" type="text" autocapitalize="on" autocomplete="off" autocorrect="off" name="description" placeholder=" " ></textarea>
-                                    <label for="description" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Décris-moi ce que tu souhaites...</label>
+                                    <label for="description" class="text-sm absolute left-2 -top-7 text-zinc-300 peer-focus:text-sm peer-focus:-top-7 peer-focus:text-red-400 peer-placeholder-shown:text-lg  float-label peer-placeholder-shown:top-1 peer-placeholder-shown:left-6 truncate max-w-[calc(100%-18px)]">Que souhaites-tu?</label>
                                     
                                 </div>
                             
@@ -517,7 +511,7 @@
                              
                         </form>
                         <!-- Réponse du serveur -->
-                        <div id="form-message" class="message-container success relative">
+                        <div id="form-message" class="message-container success relative hidden">
                           <span class="close-btn">&times;</span>
                           <p id="form-message-text">Merci pour votre message. Je vous recontacterai prochainement!</p>
                       </div>

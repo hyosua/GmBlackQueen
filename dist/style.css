@@ -664,6 +664,10 @@ video {
   margin: 2rem;
 }
 
+.m-1{
+  margin: 0.25rem;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -1357,6 +1361,16 @@ video {
   color: rgb(9 9 11 / var(--tw-text-opacity, 1));
 }
 
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-red-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -1814,6 +1828,32 @@ footer {
   text-align: center;
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+    transform: translateY(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
 /* Pour les petits écrans */
 
 @media (max-width: 1024px) {
@@ -1946,6 +1986,10 @@ footer {
     margin-top: 8rem;
   }
 
+  .lg\:mt-8{
+    margin-top: 2rem;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -2052,6 +2096,11 @@ footer {
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-red-400{

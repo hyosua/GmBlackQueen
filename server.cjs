@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: true }));
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "colleterhyosua@gmail.com", // Remplacez par votre adresse email
-      pass: "eeji zjiv iceb qeqz", // Remplacez par votre mot de passe ou App Password
+      user: process.env.GMAIL_USER, // Remplacez par votre adresse email
+      pass: process.env.APP_PASS, // "eeji zjiv iceb qeqz"
     },
     tls: {
       rejectUnauthorized: false, // Ignore les certificats auto-signés
@@ -30,10 +30,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Route pour recevoir les données
 app.post("/envoi-email", async (req, res) => {
-  const { name, prenom, tel, mail, description } = req.body;
+  const { name, prenom, tel, description } = req.body;
 
   // Valider les champs du formulaire
-  if (!name || !prenom || !tel || !mail || !description) {
+  if (!name || !prenom || !tel || !description) {
     return res.status(400).json({ error: "Tous les champs sont requis." });
   }
 
@@ -48,7 +48,6 @@ app.post("/envoi-email", async (req, res) => {
       Nom: ${name}
       Prénom: ${prenom}
       Téléphone: ${tel}
-      Email: ${mail}
       Description: ${description}
     `,
   };
