@@ -5,7 +5,7 @@ D:.
 �   .htmlhintrc
 �   .stylelintrc.json
 �   eslint.config.mjs
-�   public/index.html
+�   index.html
 �   package-lock.json
 �   package.json
 �   postcss.config.js
@@ -115,7 +115,7 @@ D:.
 �           9.mp4
 �           
 +---dist
-�       public/index.html
+�       index.html
 �       style.css
 �       
 +---node_modules
@@ -9843,6 +9843,6 @@ D:.
 �           readme.md
 �           
 +---src
-        public/index.html
+        index.html
         style.css
         
