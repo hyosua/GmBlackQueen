@@ -7,7 +7,7 @@ Un portfolio interactif et professionnel pour une maquilleuse et coiffeuse évé
 [Visiter le site en ligne](https://gmblackqueen.fr)
 
 ### Capture d'écran
-![Aperçu du site](./public/assets/img/capture-ecran.png)
+![Aperçu du site](https://imgur.com/a/5UbwgzA)
 
 ## Fonctionnalités
 
