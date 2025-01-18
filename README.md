@@ -6,9 +6,6 @@ Un portfolio interactif et professionnel pour une maquilleuse et coiffeuse évé
 
 [Visiter le site en ligne](https://gmblackqueen.fr)
 
-### Capture d'écran
-![Aperçu du site](https://imgur.com/a/5UbwgzA)
-
 ## Fonctionnalités
 
 - Galerie d'images interactive avec carrousels.
@@ -20,7 +17,7 @@ Un portfolio interactif et professionnel pour une maquilleuse et coiffeuse évé
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/DryKissFffo/GmBlackQueen.git
+   git clone https://github.com/hyosua/GmBlackQueen.git
 
 2. Installez les dépendances:
     npm intall
